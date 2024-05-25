@@ -26,7 +26,7 @@ function App() {
               <Header />
               <div className="dropdown-divider"></div>
               <Routes>
-                <Route exact path="/" element={<HomeScreen />} />
+                <Route exact path="/Profile" element={<HomeScreen />} />
                 <Route exact path="/home" element={<HomeScreen />} />
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/services" element={<ServicesScreen />} />
