@@ -7,7 +7,7 @@ import profile from "../../Image/tejaspp.png";
 
 const HomeScreen = () => {
     const [loading, setLoading] = useState(true);
-    const url = "https://drive.google.com/uc?export=download&id=1VQo2r5BnwM9uRFCSxx65UXRoX3t-MdDT";
+    const url = "https://drive.google.com/uc?export=download&id=15t2qCBBKr8GvAM_F7KklgAnpbtooWoDi";
 
     useEffect(() => {
         const timer = setTimeout(() => {
