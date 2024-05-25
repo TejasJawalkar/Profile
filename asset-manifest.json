@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/TejasJawalkar/Profile/static/css/main.7c07eb0e.css",
-    "main.js": "/TejasJawalkar/Profile/static/js/main.b5e0f52b.js",
-    "static/js/453.d73b0aaa.chunk.js": "/TejasJawalkar/Profile/static/js/453.d73b0aaa.chunk.js",
-    "static/media/tejaspp.png": "/TejasJawalkar/Profile/static/media/tejaspp.70d76de29731c1773e2e.png",
-    "static/media/background.jpg": "/TejasJawalkar/Profile/static/media/background.473bb27749bd7a246316.jpg",
-    "static/media/stump.png": "/TejasJawalkar/Profile/static/media/stump.2a2cb32c0e26d5f367b5.png",
-    "static/media/video.png": "/TejasJawalkar/Profile/static/media/video.3830736bbfb673d51709.png",
-    "static/media/learning.png": "/TejasJawalkar/Profile/static/media/learning.0867eacb86461f5751cd.png",
-    "static/media/gamepad.png": "/TejasJawalkar/Profile/static/media/gamepad.ddc867d725d8c81da280.png",
-    "index.html": "/TejasJawalkar/Profile/index.html",
-    "main.7c07eb0e.css.map": "/TejasJawalkar/Profile/static/css/main.7c07eb0e.css.map",
-    "main.b5e0f52b.js.map": "/TejasJawalkar/Profile/static/js/main.b5e0f52b.js.map",
-    "453.d73b0aaa.chunk.js.map": "/TejasJawalkar/Profile/static/js/453.d73b0aaa.chunk.js.map"
+    "main.css": "/Profile/static/css/main.f4657660.css",
+    "main.js": "/Profile/static/js/main.61fbad75.js",
+    "static/js/453.d73b0aaa.chunk.js": "/Profile/static/js/453.d73b0aaa.chunk.js",
+    "static/media/tejaspp.png": "/Profile/static/media/tejaspp.70d76de29731c1773e2e.png",
+    "static/media/background.jpg": "/Profile/static/media/background.473bb27749bd7a246316.jpg",
+    "static/media/stump.png": "/Profile/static/media/stump.2a2cb32c0e26d5f367b5.png",
+    "static/media/video.png": "/Profile/static/media/video.3830736bbfb673d51709.png",
+    "static/media/learning.png": "/Profile/static/media/learning.0867eacb86461f5751cd.png",
+    "static/media/gamepad.png": "/Profile/static/media/gamepad.ddc867d725d8c81da280.png",
+    "index.html": "/Profile/index.html",
+    "main.f4657660.css.map": "/Profile/static/css/main.f4657660.css.map",
+    "main.61fbad75.js.map": "/Profile/static/js/main.61fbad75.js.map",
+    "453.d73b0aaa.chunk.js.map": "/Profile/static/js/453.d73b0aaa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c07eb0e.css",
-    "static/js/main.b5e0f52b.js"
+    "static/css/main.f4657660.css",
+    "static/js/main.61fbad75.js"
   ]
 }
