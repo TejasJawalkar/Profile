@@ -1,0 +1,181 @@
+/* Main container for sidebar layout */
+.sidebarContainer {
+  position: relative;
+}
+
+/* Sidebar styling - moved to the right side with transparent background and blur */
+.sidebar {
+  position: fixed;
+  top: -40px;
+  right: -250px;
+  /* Initially hidden off-screen on the right */
+  height: 120%;
+  width: 250px;
+  background-color: transparent;
+  /* Transparent white background */
+  backdrop-filter: blur(10px);
+  /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari support */
+  transition: right 0.4s ease-in-out;
+  /* Smooth slide-in/slide-out transition */
+  z-index: 1000;
+  padding-top: 60px;
+  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+  /* Optional: shadow effect for better visibility */
+}
+
+.navigation{
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+  border:none;
+  border-bottom: 1px solid;
+}
+
+.maincontent{
+  margin-top:5.5rem;
+  scroll-snap-type: y mandatory;
+}
+
+.open {
+  right: 0;
+  /* When open, it moves to the right edge of the screen */
+}
+
+/* Navbar-toggler for mobile view */
+.navbarToggler {
+  position: fixed;
+  top: 30px;
+  right: 15px;
+  /* Move the toggle to the right side */
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Nav styling inside the sidebar */
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  border: none;
+}
+
+/* Overlay for closing the sidebar */
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  /* Smooth fade-in/fade-out */
+  z-index: 900;
+}
+
+.overlay.open {
+  opacity: 1;
+}
+
+.brandText {
+  font-size: 2rem !important;
+  font-weight: bold;
+  display: block;
+  text-align: start;
+  padding: 0.2rem;
+  margin-top: 10px;
+  margin-left: 100px;
+  text-decoration: none;
+  color: white !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navitem {
+  text-decoration: none;
+  padding: 17px;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  z-index: 1100;
+  font-size: 18px;
+}
+
+.link:hover {
+  width: 100%;
+  color: #007bff;
+}
+
+.linkwrapper {
+  margin-top: 10rem !important;
+  position: absolute;
+  left: 5rem;
+
+}
+
+.darkmode {
+  padding: 7px;
+  position: absolute;
+  left: 60rem;
+  top: 14px;
+}
+
+.btn {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+@media (max-width: 576px) {
+  .darkmode {
+    position: absolute;
+    top: 0px !important;
+    left: 16rem;
+  }
+
+  .brandText {
+    font-size: 1.7rem !important;
+    position: absolute;
+    display: block;
+    text-align: start;
+    top: -7px;
+    left: -4rem;
+    text-decoration: none;
+    color: white !important;
+  }
+
+  .navbarToggler {
+    position: fixed;
+    top: 12px;
+    right: 15px;
+    /* Move the toggle to the right side */
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .navigation{
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    height: 60px;
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+    border: none;
+    border-bottom: 1px solid white;
+  }
+
+  .maincontent{
+    margin-top: 5rem;
+    scroll-snap-type: y mandatory;
+    padding: 1px !important;
+  }
+  
+  
+}

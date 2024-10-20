@@ -1,0 +1,432 @@
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+.maincontainer {
+  overflow-x: hidden !important;
+  padding: 0rem;
+}
+
+.maincontainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.maincontainer {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+.divcontainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+.title {
+  font-size: 1.4rem;
+}
+
+.heading {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 1pt;
+  margin-right: 0;
+  text-decoration: none;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 2px;
+  background: rgb(255, 143, 143);
+  transition: width 0.15s;
+}
+
+.heading:hover::after {
+  width: 16%;
+  transition: width 0.7s;
+}
+
+/* Adjust absolute positioning */
+.imagewrapper {
+  position: absolute;
+  top: 10rem;
+  left: 7rem;
+  height: 20rem !important;
+  width: 16rem !important;
+  border-radius: 55%;
+  z-index: 1000;
+}
+
+.ppimage {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  height: 19.8rem;
+  /* Adjust height */
+  width: 14.8rem;
+  /* Use max-width to scale */
+  z-index: 1;
+  border-radius: 60%;
+  object-fit: contain;
+  padding: 1rem;
+  /* box-shadow: 0 4px 8px 0 #4988fd, 0 6px 20px 0 #4988fd outset; */
+  box-shadow: 0.1rem 0.1rem #4988fd, -0.1rem -0.1rem #4988fd
+}
+
+.personalcontainer {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 17rem;
+  left: 24.7rem;
+  bottom: 2rem;
+}
+
+.personalcontainer p {
+  border-top: 1px solid white;
+  width: 100%;
+  position: absolute;
+  top: -1rem;
+  left: -0.1rem;
+  bottom: 1rem;
+  font-size: 18px;
+}
+
+.content1 {
+  position: absolute;
+  top: 9rem;
+  left: 24rem;
+  width: 60%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.content2 {
+  width: 23rem;
+}
+
+.content3 {
+  position: absolute;
+  top: 10rem !important;
+  left: 24.5rem;
+  width: 60%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.ptext {
+  padding: 0.2rem;
+  font-size: 1.2rem;
+}
+
+.ptext img{
+  position: relative;
+  top: -0.1rem;
+}
+
+.skillcontainer {
+  position: absolute;
+  top: 40rem;
+  bottom: 10rem;
+  width: 70.2rem;
+  height: 12rem;
+  padding: 1rem;
+  padding-bottom: 2rem !important;
+}
+
+.progres {
+  padding: 0.8rem;
+}
+
+.progres p {
+  font-size: 1rem;
+  font-family: Chakra Petch sans-serif;
+  font-weight: bold;
+}
+
+.hobbiescontainer {
+  position: absolute;
+  top: 69.5rem;
+  width: 70.2rem;
+  padding: 1rem;
+  padding-bottom: 2rem !important;
+}
+
+.hobbiescontainer img {
+  width: 7rem;
+  box-shadow: 3px red inset,
+    -1em 0 0.4em olive;
+  padding: 1rem;
+  border-width: 3px;
+  border-style: solid;
+  border-image:
+    linear-gradient(to bottom,
+      #4988fd,
+      rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.hobbiescontainer p {
+  font-size: 1.5rem;
+}
+
+
+.interestcontainer {
+  position: absolute;
+  top: 86rem;
+  width: 70.2rem;
+}
+
+.interesticon {
+  height: 4rem;
+  width: 16rem;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin: 1rem auto; /* Center the div horizontally */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* Set text or icon color to white for better contrast */
+  padding: 2rem;
+  background-color: transparent;
+  /* Transparent white background */
+  backdrop-filter: blur(20px);
+  /* Blur effect */
+  -webkit-backdrop-filter: blur(20px);
+  /* For Safari support */
+  transition: right 0.4s ease-in-out;
+  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+}
+.interesticon:hover
+{
+  box-shadow: 0 -1px 8px rgba(255, 255, 255, 0.3); /* Light white shadow */
+
+}
+
+/* If you have images or icons inside the .interesticon, style them accordingly */
+.interesticon img {
+  height: 2.5rem;
+  object-fit: contain;
+   margin-right: 0.5rem;
+   margin-top: -1.2rem;
+}
+
+.interesticon i {
+  font-size: 1rem;
+  color: white; /* Icon color to contrast with the dark background */
+  font-weight: bold;
+  margin-left:1.2rem;  font-style: normal;
+    margin-top: -1rem;
+}
+
+.icontext{
+  margin-top: -1.1rem !important;
+}
+
+
+@media (max-width: 576px) {
+  .maincontainer {
+    overflow-x: hidden !important;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    justify-content: start;
+  }
+
+  .divcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    /* Prevent overflow */
+  }
+
+  .ppimage {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    height: 19.8rem;
+    /* Adjust height */
+    width: 15.8rem;
+    /* Use max-width to scale */
+    z-index: 1;
+    border-radius: 60%;
+    object-fit: contain;
+  }
+
+  .imagewrapper {
+    position: absolute;
+    top: 9rem;
+    left: 4rem;
+    z-index: 1;
+  }
+
+  .content1 {
+    position: absolute;
+    top: 29rem;
+    left: -0.5rem;
+    width: 49vh;
+    align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 1px;
+    letter-spacing: -1px;
+    padding: 1.5rem;
+  }
+
+  .personalcontainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 41em;
+    left: 2rem;
+    bottom: 12rem;
+  }
+
+  .personalcontainer p {
+    border-top: 1px solid white;
+    position: absolute;
+    top: -1rem;
+    left: -0.1rem;
+    bottom: 2rem;
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .content2:nth-child(2) {
+    position: absolute;
+    top: 6.5rem;
+  }
+
+  .content3 {
+    position: absolute;
+    top: 16.5rem !important;
+    left: 2rem;
+    width: 60%;
+    bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .skillcontainer {
+    position: absolute;
+    top: 92rem;
+    width: 22rem;
+  }
+
+  .hobbiescontainer {
+    position: absolute;
+    top: 148rem;
+    width: 22rem;
+    justify-items: center;
+  }
+
+  .hobbiescontainer img {
+    width: 7rem;
+    box-shadow: 3px #4988fd inset,
+      -1em 0 0.4em olive;
+    padding: 1rem;
+
+  }
+
+  .hobbiescontainer p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .interestcontainer {
+    position: absolute;
+    top: 196rem;
+    width: 22rem;
+  }
+
+  .interesticon {
+    height: 5rem;
+    width: 17rem;
+    display: flex;
+    background-color: transparent;
+    /* Transparent white background */
+    backdrop-filter: blur(20px);
+    /* Blur effect */
+    -webkit-backdrop-filter: blur(20px);
+    /* For Safari support */
+    transition: right 0.4s ease-in-out;
+    box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+  }
+  
+  /* If you have images or icons inside the .interesticon, style them accordingly */
+  .interesticon img {
+    height: 2rem;
+    object-fit: contain;
+    margin-right: 1rem;
+    margin-top: -0.5rem;
+  }
+  
+  .interesticon i {
+    font-size: 1rem;
+    color: white; /* Icon color to contrast with the dark background */
+    margin-left:1.2rem;  font-style: normal;
+    margin-top: -0.3rem;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .maincontainer {
+    overflow-x: hidden !important;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    justify-content: start;
+  }
+
+  .divcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    /* Prevent overflow */
+  }
+
+  .ppimage {
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    height: 19.8rem;
+    /* Adjust height */
+    width: 15.8rem;
+    /* Use max-width to scale */
+    z-index: 1;
+    border-radius: 60%;
+    object-fit: contain;
+  }
+
+  .imagewrapper {
+    position: absolute;
+    top: 9rem;
+    left: 4rem;
+    z-index: 1;
+
+  }
+
+  .content1 {
+    position: absolute;
+    top: 29rem;
+    left: -0.5rem;
+    width: 60vh;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 1px;
+    letter-spacing: -1px;
+    padding: 1.5rem;
+  }
+
+}

@@ -1,0 +1,99 @@
+.maincontainer {
+  height: auto;
+}
+.heading {
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1pt;
+  margin-right: 0;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 2px;
+  background: rgb(255, 143, 143);
+  transition: width 0.15s;
+}
+
+.heading:hover::after {
+  width: 16%;
+  transition: width 0.7s;
+}
+
+.Servicescontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.services {
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 20rem;
+  height: 26rem;
+  padding: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 25px, rgba(0, 0, 0, 0.15) 0px 5px 10px;
+}
+
+.services:hover{
+  
+  box-shadow:  rgba(114, 83, 83, 0.2) 0px 15px 25px, rgba(114, 83, 83, 0.2) 0px 5px 10px;
+
+}
+
+.services img {
+  position: absolute;
+  top: -1.5rem;
+  /* Adjust to make the image overlap the container */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3.5rem;
+  padding: 8px;
+  background-color: tr;
+  border-radius: 10%;
+  box-shadow: #4988fd 0px 1px 10px 1px, #4988fd 0px 18px 16px -28px;
+}
+
+.services>.headers{
+  font-size: 20px;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.services p{
+  margin-top: 1rem;
+  word-spacing: 0rem;
+  letter-spacing: 0rem;
+  font-size: 15px;
+  
+  word-spacing: 1px;
+}
+
+@media (max-width: 576px) {
+  .Servicescontainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services {
+    position: relative;
+    right: 1rem;
+    margin-bottom: 1rem;
+    width: 20rem;
+    height: 28rem;
+  }
+
+  .services img {
+    position: absolute;
+    top: -1.5rem;
+  }
+
+  .services p{
+    font-size: 0.8rem;
+  }
+}

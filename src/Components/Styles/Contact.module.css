@@ -1,0 +1,302 @@
+.maincontainer {
+  height: auto;
+}
+
+.heading {
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1pt;
+  margin-right: 0;
+  font-size: 2rem;
+  text-decoration: none;
+  align-items: start;
+  position: relative;
+  color: white !important;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 2px;
+  background: rgb(255, 143, 143);
+  transition: width 0.15s;
+}
+
+.heading:hover::after {
+  width: 16%;
+  transition: width 0.7s;
+}
+
+.dContainer {
+  width: 70%;
+  height: 11rem;
+}
+
+.c1 {
+  height: 11rem;
+  background-color: transparent;
+  /* Transparent white background */
+  backdrop-filter: blur(20px);
+  /* Blur effect */
+  -webkit-backdrop-filter: blur(20px);
+  /* For Safari support */
+  transition: right 0.4s ease-in-out;
+  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+}
+
+.c1 img {
+  height: 3rem;
+  position: relative;
+  top: 0.9rem;
+  left: 1rem;
+  border: 1px solid gray;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: transparent;
+  /* Transparent white background */
+  backdrop-filter: blur(10px);
+  /* Blur effect */
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+}
+
+.c1 i {
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  top: 1rem;
+  left: 2rem;
+}
+
+.c2 {
+  position: relative;
+  top: 1rem;
+  left: 8rem;
+  display: flex;
+  flex-direction: column;
+  scrollbar-gutter: 0px;
+}
+
+.c2 p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+}
+
+
+.eContainer {
+  width: 100%;
+  height: auto;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  /* For Safari support */
+  transition: right 0.4s ease-in-out;
+  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+}
+
+.c3 {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+}
+
+.c3 img {
+  height: 3rem;
+  position: relative;
+  top: 0.9rem;
+  left: 0.5rem;
+  border: 1px solid gray;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: transparent;
+  /* Transparent white background */
+  backdrop-filter: blur(10px);
+  /* Blur effect */
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+}
+
+.c3 i {
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  top: 0.1rem;
+  left: 1rem;
+}
+
+.c4 {
+  width: 80%;
+  position: relative;
+  top: 0.3rem;
+  left: 1rem;
+}
+
+input[type="text"],input[type="email"]{
+  background-color: transparent !important;
+  /* Input background transparent */
+  border: none;
+  border-bottom: 1px solid #ff2e2e;
+  /* Optional: border */
+  color: white !important;
+  outline: none;
+}
+
+
+textarea{
+  background-color: transparent !important;
+  /* Input background transparent */
+  border: none !important;
+  border-bottom: 1px solid #fc4242 !important;
+  /* Optional: border */
+  color: white !important;
+}
+
+textarea:focus{
+  border-bottom: 1px solid #86b7fe !important;
+}
+
+::placeholder {
+  color: white !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: red !important;
+}
+
+.formbtn{
+  font-weight: bold !important;
+  font-size: 1rem;
+}
+
+.inputs:focus {
+  background-color: transparent !important;
+  /* Prevent background change on focus */
+  box-shadow: none;
+  /* Disable box-shadow */
+  color: white;
+  outline: none;
+  /* Remove the default outline */
+}
+
+.iconcontainer {
+  display: flex;
+  flex-direction: row;
+  padding: 1px;
+}
+
+.icon {
+  border: 1px solid white;
+  height: 4rem;
+  width: 4rem;
+  margin: 5px;
+  /* Added margin for spacing between icons */
+  display: flex;
+  /* Centering the icon content */
+  align-items: center;
+  /* Align items vertically */
+  justify-content: center;
+  /* Align items horizontally */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Optional: semi-transparent background */
+  border-radius: 50%;
+  /* Optional: rounded icons */
+  font-size: 2.5rem;
+  color: white;
+}
+
+
+.icon:nth-child(1):hover {
+  background-color: #0077B5;
+}
+
+.icon:nth-child(2):hover {
+  background-color: white;
+  color: black;
+}
+
+.icon:hover:nth-child(3) {
+  background-color: #1A74ED;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .dContainer {
+    width: 100%;
+    height: 11rem;
+    background-color: transparent;
+    /* Transparent white background */
+    backdrop-filter: blur(20px);
+    /* Blur effect */
+    -webkit-backdrop-filter: blur(20px);
+    /* For Safari support */
+    transition: right 0.4s ease-in-out;
+    box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+  }
+
+  .eContainer {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .c1 i {
+    font-size: 1rem;
+  }
+
+  .c2 {
+    font-size: 1rem;
+    top: 3rem;
+    left: 1rem;
+  }
+
+  .c2 p {
+    font-size: 0.8rem;
+  }
+
+  .c3 i {
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+  }
+
+
+  .c4 {
+    width: 100%;
+    position: relative;
+    top: 1rem;
+    left: 0rem;
+  }
+
+  input {
+    font-size: 15px;
+  }
+
+  .c3 {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .iconcontainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 3rem;
+    top: -2rem
+  }
+
+}

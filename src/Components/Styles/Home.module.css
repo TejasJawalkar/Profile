@@ -1,0 +1,179 @@
+.container {
+  background-color: transparent;
+  color: white;
+  padding: 1.5rem;
+  /* Added padding for better readability */
+  word-spacing: 0rem;
+  letter-spacing: 0rem;
+}
+
+.detailscontainer {
+  padding: 50px;
+  margin-top: 10rem !important;
+}
+
+.ch1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  font-weight: bold;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  font-size: 3rem;
+}
+
+.ch2 {
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+  line-break: normal;
+  font-size: 2.2rem;
+}
+
+.ch3 {
+  position: absolute;
+  top: 17.5rem;
+  left: 10rem;
+  line-break: normal;
+  font-size: 2.2rem;
+}
+
+.resumebtntext{
+  position: absolute;
+  top: 21rem;
+  left: 15.5rem;
+  font-size: 22px;
+}
+
+.resumebtn {
+  position: absolute;
+  top: 23rem;
+  left: 16rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  color: white;
+  box-shadow: none !important;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.resumebtn:hover{
+  background-color: white;
+  color: black;
+  box-shadow : inset linear-gradient(to left bottom, #051937, #171228, #190a1a, #12040d, #000000);
+  transition: all 0.3s ease-out;
+}
+
+.iconcontainer1 {
+  display: flex; /* Removed duplicate display: block */
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute; /* Positioning to overlay correctly */
+  top: 30rem; /* Adjust this value as necessary for your layout */
+  left: 11.5rem; /* Adjust this value as necessary for your layout */
+  padding: 10px;
+  z-index: 2; /* Ensure icons are above particles */
+}
+
+.icon {
+  font-size:4rem;
+  color: white;
+  height: 3rem;
+  width: 3rem;
+  margin: 5px; /* Added margin for spacing between icons */
+  display: flex; /* Centering the icon content */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Align items horizontally */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: semi-transparent background */
+  border-radius: 50%; /* Optional: rounded icons */
+  
+}
+
+.icon:nth-child(1)
+{
+  font-size: 1.7rem;
+}
+
+.icon:nth-child(2)
+{
+  font-size: 1.7rem;
+}
+
+.icon:nth-child(3)
+{
+  font-size: 1.7rem;
+}
+
+
+.icon:hover:nth-child(1)
+{
+  background-color: #0077B5;
+  color: white;
+}
+
+
+.icon:hover:nth-child(2)
+{
+  background-color: white;
+  color: black;
+}
+.icon:hover:nth-child(3)
+{
+  background-color: #1A74ED;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .ch1 {
+    content: "Tejas Jawalkar";
+    position: absolute;
+    top: 10rem;
+    left: 1.5rem;
+    list-style: none;
+    font-size: 3rem;
+  }
+
+  .ch2 {
+    position: absolute;
+    top: 16rem;
+    left:2.1rem;
+    font-size: 1.2rem;
+  }
+  .ch3 {
+    position: absolute;
+    top: 18rem;
+    left: 2.1rem;
+    font-size: 1.2rem;
+  }
+
+  .resumebtntext{
+    position: absolute;
+    top: 27rem;
+    left: 9.5rem;
+  }
+
+  .resumebtn {
+    position: absolute;
+    top: 30rem;
+    left: 10.5rem;
+    padding: 12px;
+  }
+
+  .iconcontainer1{
+    display: none;
+  }
+
+  
+.iconcontainer1{
+  display: flex; /* Removed duplicate display: block */
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute; /* Positioning to overlay correctly */
+  top: 40rem; /* Adjust this value as necessary for your layout */
+  left: 6rem; /* Adjust this value as necessary for your layout */
+  padding: 5px;
+  z-index: 2; /* Ensure icons are above particles */
+}
+
+}
