@@ -12,7 +12,7 @@ import {
   faBarsStaggered,
   faMoon,
 } from "@fortawesome/free-solid-svg-icons";
-import styles from "../Styles/SideBar.module.css";
+import styles from "./SideBar.module.css";
 import { Link, NavLink } from "react-router-dom";
 
 export const Header = () => {
