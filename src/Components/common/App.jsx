@@ -1,7 +1,6 @@
 import "../../bootstrap.min.css";
 import { Header } from "../common/Header";
-import "../Styles/App.css"; // Add smooth scrolling CSS here if not already included
-import styles from "../Styles/SideBar.module.css";
+import "../Styles/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Home } from "../Home";
 import { About } from "../About";
@@ -18,7 +17,7 @@ function App() {
       <Container className={classNames("p-2")} fluid>
       <Router basename="">
         <Header />
-        <div className={`${styles.maincontent}`}>
+        <div className={classNames("maincontent")}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/TejasJ/About" element={<About />}></Route>

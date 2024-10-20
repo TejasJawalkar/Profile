@@ -51,6 +51,12 @@ body {
   left: 22rem;
 }
 
+.maincontent{
+  margin-top:5.5rem;
+  scroll-snap-type: y mandatory;
+}
+
+
 /* Tablet and above styles */
 @media (max-width: 577px) {
   .break {
@@ -65,4 +71,10 @@ body {
     top: 24rem;
     left: 2rem;
   }
+  .maincontent{
+    margin-top: 5rem;
+    scroll-snap-type: y mandatory;
+    padding: 1px !important;
+  }
+  
 }
