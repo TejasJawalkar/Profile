@@ -65,17 +65,17 @@ export const Header = () => {
                   </NavLink>
                 </div>
                 <div className={`${styles.navitem}`}>
-                  <NavLink className={`${styles.link} `} to="/TejasJ/About" onClick={okf}>
+                  <NavLink className={`${styles.link} `} to="/About" onClick={okf}>
                     About
                   </NavLink>
                 </div>
                 <div className={`${styles.navitem}`}>
-                  <NavLink className={`${styles.link}`} to="/TejasJ/Services" onClick={okf}>
+                  <NavLink className={`${styles.link}`} to="/Services" onClick={okf}>
                   Services
                   </NavLink>
                 </div>
                 <div className={`${styles.navitem}`}>
-                  <NavLink className={`${styles.link}`} to="/TejasJ/Contact" onClick={okf}>
+                  <NavLink className={`${styles.link}`} to="/Contact" onClick={okf}>
                     Contact
                   </NavLink>
                 </div>
