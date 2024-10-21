@@ -32,9 +32,7 @@ export const Services = () => {
               <div className={classNames(Styles.headers)}>
                 User friendly 
               </div>
-              
                 <img src={images.logo22} alt="" />
-              
               <div>
                 <Container><p>
               I personally prefer that web pages be browser-friendly, ensuring they work seamlessly on every platform, including Firefox, Microsoft Edge, and Internet Explorer. This cross-platform compatibility is essential for providing a consistent user experience, regardless of the browser users choose. By optimizing web pages for multiple browsers, we can reach a wider audience and ensure accessibility for all users.
