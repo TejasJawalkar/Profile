@@ -17,10 +17,8 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isColor, setIsColor] = useState(false);
 
   const toggleSidebar = () => setIsOpen(!isOpen);
-  const colortoggleSidebar = () => setIsColor(!isColor);
   const okf = () => {toggleSidebar()};
   return (
     <>
