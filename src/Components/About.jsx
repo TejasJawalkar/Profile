@@ -347,7 +347,7 @@ export const About = () => {
                   rel="noreferrer"
                 >
                   {" "}
-                  Git Essential Training (Udemy)
+                  Git Essential Training (Linkedin)
                   <img src={images.open} alt="Redirect" />
                 </a>
               </div>
@@ -357,7 +357,7 @@ export const About = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Building Modern Projects with React (Udemy)
+                  Building Modern Projects with React (Linkedin)
                   <img src={images.open} alt="Redirect" />
                 </a>
               </div>
@@ -367,7 +367,7 @@ export const About = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  ASP.NET Core MVC (Udemy)
+                  ASP.NET Core MVC (Linkedin)
                   <img src={images.open} alt="Redirect" />
                 </a>
               </div>
