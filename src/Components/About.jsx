@@ -21,10 +21,7 @@ export const About = () => {
   }, [dob]); // Add dob as a dependency
   return (
     <>
-      <Container
-        className={classNames("p-2 pb-2 text-start")}
-        
-      >
+      <Container className={classNames("p-2 pb-2 text-start")}>
         <div className={styles.maincontainer}>
           <div
             className={classNames(
@@ -62,7 +59,9 @@ export const About = () => {
             )}
           >
             <Container>
-              <p className={classNames(styles.title,"mt-1")}>Dot Net Full Stack Developer</p>
+              <p className={classNames(styles.title, "mt-1")}>
+                Dot Net Full Stack Developer
+              </p>
               <p>
                 I'm the passionate Full Stack Developer having good knowledge in
                 the various web technologies to provide a robust synopsis for
@@ -81,16 +80,19 @@ export const About = () => {
               )}
             >
               <div className={classNames(styles.ptext)}>
-              <img src={images.logo18} alt="Arrow"/>&nbsp;
-                Email: tejassj1998@gmail.com
+                <img src={images.logo18} alt="Arrow" />
+                &nbsp; Email: tejassj1998@gmail.com
               </div>
               <div className={classNames(styles.ptext)}>
-              <img src={images.logo18} alt="Arrow"/>&nbsp;
-                Degree : M. C. A.
+                <img src={images.logo18} alt="Arrow" />
+                &nbsp; Degree : M. C. A.
               </div>
               <div className={classNames(styles.ptext)}>
-                <img src={images.logo18} alt="Arrow"/>&nbsp;
-                Status : <i className={classNames("")} style={{fontStyle:"normal"}}>Open to Work</i>
+                <img src={images.logo18} alt="Arrow" />
+                &nbsp; Status :{" "}
+                <i className={classNames("")} style={{ fontStyle: "normal" }}>
+                  Open to Work
+                </i>
               </div>
             </div>
             <div
@@ -102,16 +104,16 @@ export const About = () => {
               )}
             >
               <div className={classNames(styles.ptext)}>
-              <img src={images.logo18} alt="Arrow"/>&nbsp;
-                Date of Birth: {dob}
+                <img src={images.logo18} alt="Arrow" />
+                &nbsp; Date of Birth: {dob}
               </div>
               <div className={classNames(styles.ptext)}>
-              <img src={images.logo18} alt="Arrow"/>&nbsp;
-                Age: {Age}
+                <img src={images.logo18} alt="Arrow" />
+                &nbsp; Age: {Age}
               </div>
               <div className={classNames(styles.ptext)}>
-                <img src={images.logo18} alt="Arrow"/>&nbsp;
-                Country: India
+                <img src={images.logo18} alt="Arrow" />
+                &nbsp; Country: India
               </div>
             </div>
             <div className="">
@@ -334,11 +336,46 @@ export const About = () => {
               </Col>
             </Row>
           </div>
+          <div className={classNames(styles.cerficationcontainer)}>
+            <div className="break"></div>
+            <p className={classNames(styles.heading)}>Cerfications I have</p>
+            <Container className={classNames("text-start",styles.certifiacates)}>
+              <div>
+                <a
+                  href="https://drive.google.com/uc?export=download&amp;id=1Ef_PxcseyAHjR9lQuN7QfxxNneOSjmKr"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  Git Essential Training (Udemy)
+                  <img src={images.open} alt="Redirect" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://drive.google.com/uc?export=download&amp;id=1__8i1EvCZFx_Coe3GiblnwJrU-1WV04A"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Building Modern Projects with React (Udemy)
+                  <img src={images.open} alt="Redirect" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/learning/certificates/1c8db6198b8a8d90ead1527aefea77e393a10f42ca3f40bcef4986fa57b707d2"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  ASP.NET Core MVC (Udemy)
+                  <img src={images.open} alt="Redirect" />
+                </a>
+              </div>
+            </Container>
+          </div>
           <div className={classNames(styles.interestcontainer)}>
             <div className="break"></div>
-            <p className={classNames(styles.heading)}>
-              Interest In
-            </p>
+            <p className={classNames(styles.heading)}>Interest In</p>
             <Row className="text-center">
               <Col sm={3}>
                 <div className={styles.interesticon}>
@@ -402,7 +439,11 @@ export const About = () => {
               </Col>
               <Col sm={3}>
                 <div className={styles.interesticon}>
-                  <img src={images.logo10} style={{border:"1px solid #c0c0c0"}} alt="ExpressJS" />
+                  <img
+                    src={images.logo10}
+                    style={{ border: "1px solid #c0c0c0" }}
+                    alt="ExpressJS"
+                  />
                   <i>ExpressJS</i>
                 </div>
               </Col>
