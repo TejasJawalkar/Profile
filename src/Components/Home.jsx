@@ -5,11 +5,10 @@ import { loadFull } from "tsparticles";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaBitbucket } from "react-icons/fa";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Styles/Home.module.css";
 import classNames from "classnames";
 import resumepdf from "./images/Tejas_Jawalkar_Resume_2024.pdf";
+import images from "./common/exports"
 
 export const Home = () => {
   //#region
@@ -72,7 +71,7 @@ export const Home = () => {
           direction: "none",
           enable: true,
           outModes: {
-            default: "",
+            default: "bounce",
           },
           random: true,
           speed: 2,
@@ -82,7 +81,7 @@ export const Home = () => {
           density: {
             enable: true,
           },
-          value: 580,
+          value: 200,
         },
         opacity: {
           value: 0.2,
@@ -124,7 +123,7 @@ export const Home = () => {
                   styles.ch1
                 )}
               >
-                Tejas Jawalkar
+                Tejas S. Jawalkar
               </p>
               <p
                 className={classNames(
@@ -179,16 +178,8 @@ export const Home = () => {
                 <FaBitbucket />
               </a>
             </div>
+
             <div>
-              <p
-                className={classNames(
-                  "animate__animated",
-                  "animate__slideInUp",
-                  styles.resumebtntext
-                )}
-              >
-                Resume
-              </p>
               <a
                 href={resumepdf}
                 target="_blank"
@@ -198,7 +189,8 @@ export const Home = () => {
                   styles.resumebtn
                 )}
               >
-                <FontAwesomeIcon icon={faEye} />
+              Resume
+                <img src={images.open} alt="Redirect to Resume"/>
               </a>
             </div>
           </div>
