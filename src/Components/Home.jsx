@@ -7,8 +7,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaBitbucket } from "react-icons/fa";
 import styles from "./Styles/Home.module.css";
 import classNames from "classnames";
-import resumepdf from "./images/Tejas_Jawalkar_Resume_2024.pdf";
-import images from "./common/exports"
+import resumepdf from "./images/Tejas_Jawalkar_Resume.pdf";
+import images from "./common/exports";
 
 export const Home = () => {
   //#region
@@ -189,8 +189,8 @@ export const Home = () => {
                   styles.resumebtn
                 )}
               >
-              Resume
-                <img src={images.open} alt="Redirect to Resume"/>
+                Resume
+                <img src={images.open} alt="Redirect to Resume" />
               </a>
             </div>
           </div>
