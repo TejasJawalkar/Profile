@@ -13,12 +13,11 @@ export const About = () => {
     const currentYear = new Date().getFullYear();
     setCYear(currentYear);
 
-    // Split the dob string to manually get the year, month, and day
-    const [day, month, year] = dob.split("/").map(Number); // Convert parts to numbers
+    const [day, month, year] = dob.split("/").map(Number);
     const birthYear = year;
 
     setAge(currentYear - birthYear);
-  }, [dob]); // Add dob as a dependency
+  }, [dob]);
   return (
     <>
       <Container className={classNames("p-2 pb-2 text-start")}>
@@ -60,7 +59,7 @@ export const About = () => {
           >
             <Container>
               <p className={classNames(styles.title, "mt-1")}>
-                Dot Net Full Stack Developer
+                Software Engineer | Full Stack Developer
               </p>
               <p>
                 I'm the passionate Full Stack Developer having good knowledge in
@@ -124,22 +123,21 @@ export const About = () => {
                   "animate__bounceIn"
                 )}
               >
-                Over 2+ years of full-time working experience in Web Application
-                development. Experienced with all stages of the development
-                cycle for dynamic web projects. Well-versed in numerous
-                programming languages including JavaScript, C#, C, C++, JSON,
-                and a deep understanding of Object-Oriented design, Data
-                Structure and algorithm. Over 2+ years of full-time working
-                experience in Web Application development. Experienced with all
-                stages of the development cycle for dynamic web projects.
-                Well-versed in numerous programming languages including
-                JavaScript, C#, C, C++, JSON, and a deep understanding of
-                Object-Oriented design, Data Structure and algorithm.{" "}
+                Over 3 years of full-time experience in Web Application
+                Development, involved in all stages of the software development
+                lifecycle for dynamic web projects. Skilled in C#, JavaScript,
+                C, C++, and JSON, with a strong foundation in Object-Oriented
+                Design, Data Structures, and Algorithms. Proficient in Crystal
+                Reports for designing and generating business reports.
+                Experienced with POCO Generator for efficient entity class
+                generation in .NET applications. Worked with DBUM, a
+                company-developed tool used for executing and managing database
+                scripts.{" "}
               </p>
             </div>
           </div>
           <div className={styles.Expcontainer}></div>
-          <div className={classNames("mt-2", styles.skillcontainer)}>
+          <div className={classNames("mt-0", styles.skillcontainer)}>
             <div className="break"></div>
             <p className={classNames(styles.heading)}>Skills I Have</p>
             <Container>
@@ -298,6 +296,23 @@ export const About = () => {
                     </div>
                   </div>
                 </Col>
+                <Col sm={6}>
+                  <div className={classNames(styles.progres)}>
+                    <p>
+                      SSRS (Reporting Tools) &nbsp;&nbsp;&nbsp;<span>50%</span>
+                    </p>
+                    <div className="progress">
+                      <div
+                        className={classNames("progress-bar")}
+                        style={{ width: "50%", backgroundColor: "#4988fd" }}
+                        role="progressbar"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </Col>
               </Row>
             </Container>
           </div>
@@ -339,7 +354,9 @@ export const About = () => {
           <div className={classNames(styles.cerficationcontainer)}>
             <div className="break"></div>
             <p className={classNames(styles.heading)}>Cerfications I have</p>
-            <Container className={classNames("text-start",styles.certifiacates)}>
+            <Container
+              className={classNames("text-start", styles.certifiacates)}
+            >
               <div>
                 <a
                   href="https://drive.google.com/uc?export=download&amp;id=1Ef_PxcseyAHjR9lQuN7QfxxNneOSjmKr"
@@ -375,7 +392,7 @@ export const About = () => {
           </div>
           <div className={classNames(styles.interestcontainer)}>
             <div className="break"></div>
-            <p className={classNames(styles.heading)}>Interest In</p>
+            <p className={classNames(styles.heading)}>Interested In</p>
             <Row className="text-center">
               <Col sm={3}>
                 <div className={styles.interesticon}>
@@ -482,8 +499,8 @@ export const About = () => {
               </Col>
               <Col sm={3}>
                 <div className={styles.interesticon}>
-                  <img src={images.logo16} alt="Cloud Computing" />
-                  <i>Cloud Computing</i>
+                  <img src={images.logo16} alt="Crystal Report" />
+                  <i>Crystal Report</i>
                 </div>
               </Col>
             </Row>

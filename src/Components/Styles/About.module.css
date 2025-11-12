@@ -31,6 +31,10 @@ body {
   font-size: 1.4rem;
 }
 
+.title>p{
+  font-size: 3rem !important;
+}
+
 .heading {
   display: inline-block;
   font-weight: 500;
@@ -134,7 +138,7 @@ body {
 
 .skillcontainer {
   position: absolute;
-  top: 40rem;
+  top: 37rem;
   bottom: 10rem;
   width: 70.2rem;
   height: 12rem;
@@ -154,7 +158,7 @@ body {
 
 .hobbiescontainer {
   position: absolute;
-  top: 69.5rem;
+  top: 72.5rem;
   width: 70.2rem;
   padding: 1rem;
   padding-bottom: 2rem !important;
@@ -179,7 +183,7 @@ body {
 
 .cerficationcontainer{
   position: absolute;
-  top: 86rem;
+  top: 89rem;
   width: 70.2rem;
 }
 
@@ -195,9 +199,9 @@ body {
   margin: 1rem;
 }
 
+
 .certifiacates a>img{
   width: 1.5rem;
-
   left: 1rem;
 }
 
@@ -259,7 +263,7 @@ body {
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     justify-content: start;
   }
 
@@ -308,9 +312,8 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 41em;
+    top: 40rem;
     left: 2rem;
-    bottom: 12rem;
   }
 
   .personalcontainer p {
@@ -330,7 +333,7 @@ body {
 
   .content3 {
     position: absolute;
-    top: 16.5rem !important;
+    top: 14.5rem !important;
     left: 2rem;
     width: 60%;
     bottom: 2rem;
@@ -340,13 +343,13 @@ body {
 
   .skillcontainer {
     position: absolute;
-    top: 92rem;
+    top: 73rem;
     width: 22rem;
   }
 
   .hobbiescontainer {
     position: absolute;
-    top: 148rem;
+    top: 134rem;
     width: 22rem;
     justify-items: center;
   }
@@ -360,13 +363,13 @@ body {
   }
 
   .hobbiescontainer p {
-    margin-top: 1rem;
+    margin-top: -1rem;
     font-size: 1rem;
   }
 
   .interestcontainer {
     position: absolute;
-    top: 210rem;
+    top: 183.5rem;
     width: 22rem;
   }
 
@@ -401,7 +404,7 @@ body {
 
   .cerficationcontainer {
     position: absolute;
-    top: 195rem;
+    top: 173rem;
     width: 22rem;
   }
 
@@ -424,7 +427,7 @@ body {
 
 .certifiacates a {
   position: relative;
-  top:1rem;
+  top:-1rem;
   text-decoration: none;
   font-size: 0.7rem;
   padding-top: 3rem;
@@ -442,7 +445,7 @@ body {
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     justify-content: start;
   }
 

@@ -39,15 +39,15 @@
 
 .resumebtn {
   position: absolute;
-  top: 23rem;
-  left: 14rem;
-  width: 3rem;
-  height: 3rem;
+  top: 22rem;
+  left: 20rem;
+  width: 8.5rem;
+  height: 4rem;
   background-color: transparent;
   color: white;
   box-shadow: none !important;
-  border-radius: 50%;
-  padding: 12px;
+  border-radius: 75%;
+  padding: 1rem;
   display: flex;
   font-size: 1.5rem;
   text-decoration: none;
@@ -57,8 +57,20 @@
 
 .resumebtn>img{
   position: relative;
-  top:0.5rem;
+  top:-0.2rem;
+  right: -0.3rem;
+  width: 1.5rem;
 }
+
+.contactbtn{
+  position: absolute;
+  
+  color: white;
+  box-shadow: none !important;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
 
 .iconcontainer1 {
   display: flex; /* Removed duplicate display: block */
@@ -66,7 +78,7 @@
   flex-wrap: wrap;
   position: absolute; /* Positioning to overlay correctly */
   top: 30rem; /* Adjust this value as necessary for your layout */
-  left: 11.5rem; /* Adjust this value as necessary for your layout */
+  left: 17rem; /* Adjust this value as necessary for your layout */
   padding: 10px;
   z-index: 2; /* Ensure icons are above particles */
 }

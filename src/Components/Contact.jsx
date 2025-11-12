@@ -29,34 +29,34 @@ export const Contact = () => {
 
   const nameCheck = (e) => {
     if (!nameRef.current.value) {
-        setNameError("Enter Full Name");
+      setNameError("Enter Full Name");
     } else {
-        setNameError();
+      setNameError();
     }
-};
-const emailCheck = (e) => {
+  };
+  const emailCheck = (e) => {
     if (!emailRef.current.value) {
-        setEmailError("Enter Email");
+      setEmailError("Enter Email");
     } else {
-        setEmailError();
+      setEmailError();
     }
-};
-const subjectCheck = (e) => {
+  };
+  const subjectCheck = (e) => {
     if (!subjectRef.current.value) {
-        setSubjectError("Enter Subject");
+      setSubjectError("Enter Subject");
     } else {
-        setSubjectError();
+      setSubjectError();
     }
-};
-const messageCheck = (e) => {
+  };
+  const messageCheck = (e) => {
     if (!messageRef.current.value) {
-        setMessageError("Enter Message");
-        setData(true);
+      setMessageError("Enter Message");
+      setData(true);
     } else {
-        setMessageError();
-        setData(false);
+      setMessageError();
+      setData(false);
     }
-};
+  };
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -74,15 +74,15 @@ const messageCheck = (e) => {
           console.log(error.text);
         }
       );
-      Swal.fire({
-        title: `Hello ${name}`,
-        html: '<html><body><p>Thank you for reaching out, I will get back to you shortly with my thoughts or any further questions.</p></br><p>Thank you again, and I look forward to staying in touch.</p></body></html>',
-        icon: 'success',
-        customClass: {
-          popup: 'swal2-popup'
-        }
-      });  
-      setData(true);
+    Swal.fire({
+      title: `Hello ${name}`,
+      html: "<html><body><p>Thank you for reaching out, I will get back to you shortly with my thoughts or any further questions.</p></br><p>Thank you again, and I look forward to staying in touch.</p></body></html>",
+      icon: "success",
+      customClass: {
+        popup: "swal2-popup",
+      },
+    });
+    setData(true);
     e.target.reset();
   };
   return (
@@ -112,11 +112,17 @@ const messageCheck = (e) => {
                     <img src={images.logo17} alt="Address" />
                     <i>Address</i>
                     <div className={classNames(Styles.c2)}>
-                      <p>Home Town: 70 Foot Road, Solapur, 413006.</p>
                       <p>
-                        Current Location: Kale Padal, Hadapsar, Pune, 411028.
+                        Home Town:&nbsp;&nbsp;70 Foot Road, Solapur, 413006.
                       </p>
-                      <p>+91 9172804246 (Call / What's&nbsp; App)</p>
+                      <p>
+                        Current Location:&nbsp;&nbsp;Kale Padal, Hadapsar, Pune,
+                        411028.
+                      </p>
+                      <p>
+                        (+91)&nbsp;&nbsp;917-280-4246&nbsp;&nbsp;(Call /
+                        What's&nbsp; App)
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -159,7 +165,7 @@ const messageCheck = (e) => {
               <Col sm={12}>
                 <div className={classNames(Styles.eContainer)}>
                   <div className={classNames(Styles.c3)}>
-                    <img src={images.logo20} alt="" />
+                    <img src={images.logo20} alt="Connect Me" />
 
                     <i>Connect Me </i>
                   </div>
@@ -182,11 +188,13 @@ const messageCheck = (e) => {
                                   onChange={(e) => setName(e.target.value)}
                                   onBlur={nameCheck}
                                 />
-                                 {nameError ? (
-                                        <div className="text-danger">{messageError}</div>
-                                    ) : null}
+                                {nameError ? (
+                                  <div className="text-danger">
+                                    {messageError}
+                                  </div>
+                                ) : null}
                               </Col>
-                              <Col md={5} className="mt-1">
+                              <Col md={5} className="mt-2">
                                 <Form.Control
                                   className=" shadow-none rounded-0 input"
                                   placeholder="Sender Email"
@@ -197,11 +205,13 @@ const messageCheck = (e) => {
                                   onBlur={emailCheck}
                                 />
                                 {emailError ? (
-                                        <div className="text-danger">{messageError}</div>
-                                    ) : null}
+                                  <div className="text-danger">
+                                    {messageError}
+                                  </div>
+                                ) : null}
                               </Col>
                             </Row>
-                            <Row className="d-flex justify-content-center mt-1">
+                            <Row className="d-flex justify-content-center mt-2">
                               <Col md={10}>
                                 <Form.Control
                                   className=" shadow-none rounded-0 input"
@@ -212,9 +222,11 @@ const messageCheck = (e) => {
                                   onChange={(e) => setSubject(e.target.value)}
                                   onBlur={subjectCheck}
                                 />
-                                 {subjectError ? (
-                                        <div className="text-danger">{messageError}</div>
-                                    ) : null}
+                                {subjectError ? (
+                                  <div className="text-danger">
+                                    {messageError}
+                                  </div>
+                                ) : null}
                               </Col>
                             </Row>
                             <Row className="d-flex justify-content-center mt-2">
@@ -228,13 +240,15 @@ const messageCheck = (e) => {
                                   onChange={(e) => setMessage(e.target.value)}
                                   onBlur={messageCheck}
                                 />
-                                 {messageError ? (
-                                        <div className="text-danger">{messageError}</div>
-                                    ) : null}
+                                {messageError ? (
+                                  <div className="text-danger">
+                                    {messageError}
+                                  </div>
+                                ) : null}
                               </Col>
                             </Row>
                             <div className="dropdown-divider"></div>
-                            <Row className="mt-3">
+                            <Row className="mt-4">
                               <Col className="text-end" md={10}>
                                 <input
                                   type="submit"
