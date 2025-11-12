@@ -24,28 +24,37 @@ export const Contact = () => {
   const emailRef = useRef();
   const messageRef = useRef();
   const subjectRef = useRef();
-
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const form = useRef();
 
   const nameCheck = (e) => {
     if (!nameRef.current.value) {
       setNameError("Enter Full Name");
+      setData(true);
     } else {
       setNameError();
+      setData(false);
     }
   };
   const emailCheck = (e) => {
     if (!emailRef.current.value) {
       setEmailError("Enter Email");
+      setData(true);
+    } else if (!emailPattern.test(emailRef.current.value)) {
+      setEmailError("Enter Valid Email");
+      setData(true);
     } else {
       setEmailError();
+      setData(false);
     }
   };
   const subjectCheck = (e) => {
     if (!subjectRef.current.value) {
       setSubjectError("Enter Subject");
+      setData(true);
     } else {
       setSubjectError();
+      setData(false);
     }
   };
   const messageCheck = (e) => {
@@ -189,12 +198,10 @@ export const Contact = () => {
                                   onBlur={nameCheck}
                                 />
                                 {nameError ? (
-                                  <div className="text-danger">
-                                    {messageError}
-                                  </div>
+                                  <div className="text-danger">{nameError}</div>
                                 ) : null}
                               </Col>
-                              <Col md={5} className="mt-2">
+                              <Col md={5} className="mt-1">
                                 <Form.Control
                                   className=" shadow-none rounded-0 input"
                                   placeholder="Sender Email"
@@ -206,7 +213,7 @@ export const Contact = () => {
                                 />
                                 {emailError ? (
                                   <div className="text-danger">
-                                    {messageError}
+                                    {emailError}
                                   </div>
                                 ) : null}
                               </Col>
@@ -224,7 +231,7 @@ export const Contact = () => {
                                 />
                                 {subjectError ? (
                                   <div className="text-danger">
-                                    {messageError}
+                                    {subjectError}
                                   </div>
                                 ) : null}
                               </Col>

@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaBitbucket } from "react-icons/fa";
 import styles from "./Styles/Home.module.css";
 import classNames from "classnames";
-import resumepdf from "./images/Tejas_Jawalkar_Resume.pdf";
+import resumepdf from "./images/Tejas_Jawalkar_FullStack_Developer.pdf";
 import images from "./common/exports";
 
 export const Home = () => {
