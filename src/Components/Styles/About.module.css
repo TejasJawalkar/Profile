@@ -185,11 +185,12 @@ body {
   position: absolute;
   top: 89rem;
   width: 70.2rem;
+      left: 2rem;
 }
 
 .certifiacates{
   position: relative;
-  left: 20rem;
+  left: 10rem;
 }
 
 .certifiacates a {
@@ -197,6 +198,7 @@ body {
   text-decoration: none;
   font-size: 1.3rem;
   margin: 1rem;
+  left:-1rem
 }
 
 
@@ -297,7 +299,7 @@ body {
 
   .content1 {
     position: absolute;
-    top: 29rem;
+    top: 30rem;
     left: -0.5rem;
     width: 49vh;
     align-items: center;
@@ -343,13 +345,14 @@ body {
 
   .skillcontainer {
     position: absolute;
-    top: 73rem;
+    top: 76rem;
+    
     width: 22rem;
   }
 
   .hobbiescontainer {
     position: absolute;
-    top: 134rem;
+    top: 136rem;
     width: 22rem;
     justify-items: center;
   }
@@ -369,7 +372,7 @@ body {
 
   .interestcontainer {
     position: absolute;
-    top: 183.5rem;
+    top: 184rem;
     width: 22rem;
   }
 
@@ -404,7 +407,7 @@ body {
 
   .cerficationcontainer {
     position: absolute;
-    top: 173rem;
+    top: 175rem;
     width: 22rem;
   }
 
@@ -421,13 +424,14 @@ body {
 .certifiacates{
   height: 10rem;
   position: relative;
-  left: 0rem;
+  left: 1rem;
   top: 1rem;
 }
 
 .certifiacates a {
   position: relative;
   top:-1rem;
+  left:2rem;
   text-decoration: none;
   font-size: 0.7rem;
   padding-top: 3rem;

@@ -64,7 +64,6 @@
 
 .contactbtn{
   position: absolute;
-  
   color: white;
   box-shadow: none !important;
   font-size: 1rem;
@@ -161,6 +160,15 @@
     padding: 12px;
   }
 
+  .contactbtn{
+  position: absolute;
+  left:8.4rem;
+  color: white;
+  box-shadow: none !important;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
   .iconcontainer1{
     display: none;
   }
@@ -172,7 +180,7 @@
   flex-wrap: wrap;
   position: absolute; /* Positioning to overlay correctly */
   top: 40rem; /* Adjust this value as necessary for your layout */
-  left: 6rem; /* Adjust this value as necessary for your layout */
+  left: 4.2rem; /* Adjust this value as necessary for your layout */
   padding: 5px;
   z-index: 2; /* Ensure icons are above particles */
 }
