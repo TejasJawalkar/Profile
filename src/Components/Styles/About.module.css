@@ -185,12 +185,11 @@ body {
   position: absolute;
   top: 89rem;
   width: 70.2rem;
-      left: 2rem;
 }
 
 .certifiacates{
   position: relative;
-  left: 10rem;
+  left: 20rem;
 }
 
 .certifiacates a {
