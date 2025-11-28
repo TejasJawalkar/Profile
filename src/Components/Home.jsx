@@ -7,8 +7,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaBitbucket } from "react-icons/fa";
 import styles from "./Styles/Home.module.css";
 import classNames from "classnames";
-import resumepdf from "./images/Tejas_Jawalkar_FullStack_Developer.pdf";
-import images from "./common/exports";
+import resumepdf from "./images/Tejas_Jawalkar_FullStack_Developer_Resume.pdf";
+import images from "./json/exports";
 
 export const Home = () => {
   //#region
@@ -111,12 +111,7 @@ export const Home = () => {
           />
         )}
 
-        <section
-          className={classNames(
-            styles.container,
-            "d-flex align-items-center justify-content-center min-vh-100"
-          )}
-        >
+        <section className={classNames(styles.container)}>
           <div id="detailscontainer" className={styles.detailscontainer}>
             {/* Heading Section */}
             <h1

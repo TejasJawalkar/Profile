@@ -1,0 +1,135 @@
+/* MAIN CONTAINER */
+.maincontainer {
+  padding: 0;
+  color: #fff;
+}
+
+/* HEADING */
+.heading {
+  font-weight: 500;
+  letter-spacing: 1pt;
+  text-decoration: none;
+  position: relative;
+  top: 1rem;
+  left: -31rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 2px;
+  background: rgb(255, 143, 143);
+  transition: width 0.4s ease;
+}
+
+.heading:hover::after {
+  width: 80%;
+}
+
+/* WRAPPER */
+.experienceWrapper {
+  width: 100%;
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* CARD */
+.experienceCard {
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 0 8px rgba(114, 83, 83, 0.25);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 14px;
+  text-align: left;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: right 0.4s ease-in-out;
+}
+
+.experienceCard:hover
+{
+  box-shadow: 0 -1px 8px rgba(255, 255, 255, 0.3); /* Light white shadow */
+}
+
+.position {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.company {
+  font-size: 1.1rem;
+  color: #ff8d8d;
+  margin-bottom: 0.6rem;
+}
+
+.description {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 1.9rem;
+    position: relative;
+    top: 2rem;
+    left: -16rem;
+  }
+
+  .position {
+    font-size: 1.5rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .experienceWrapper {
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+
+  .heading {
+    font-size: 1.7rem;
+    position: relative;
+        top: 0rem;
+        left: -17rem;
+  }
+
+  .position {
+    font-size: 1.35rem;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .experienceCard {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+    position: relative;
+    top: -1rem;
+    left: -6rem;
+  }
+
+  .position {
+    font-size: 1.25rem;
+  }
+}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Styles/About.module.css";
 import classNames from "classnames";
 import { Col, Container, Row } from "reactstrap";
-import images from "./common/exports";
+import images from "./json/exports";
 
 export const About = () => {
   let [Age, setAge] = useState();
@@ -69,7 +69,7 @@ export const About = () => {
             </Container>
           </div>
           <div className={classNames("mt-2 mb-2", styles.personalcontainer)}>
-            <p className={classNames(styles.heading)}>Personal Details</p>
+            <p>Personal Details</p>
             <div
               className={classNames(
                 "mt-3 mb-3",

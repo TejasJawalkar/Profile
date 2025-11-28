@@ -29,6 +29,9 @@ import logo21 from "../images/device.svg";
 import logo22 from "../images/fullstack.svg";
 import logo23 from "../images/freelancer.svg";
 import open from "../images/open.svg";
+import logo24 from "../images/databaseservice.svg";
+import logo25 from "../images/developer.svg";
+import logo26 from "../images/api.svg";
 
 // Export the images as an object
 const images = {
@@ -61,6 +64,9 @@ const images = {
   logo22,
   logo23,
   open,
+  logo24,
+  logo25,
+  logo26,
 };
 
 export default images;

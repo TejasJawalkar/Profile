@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React, { useRef, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import Styles from "./Styles/Contact.module.css";
-import images from "./common/exports";
+import images from "./json/exports";
 import Form from "react-bootstrap/Form";
 import { Card } from "react-bootstrap";
 import { FaLinkedin } from "react-icons/fa";
@@ -95,193 +95,149 @@ export const Contact = () => {
     e.target.reset();
   };
   return (
-    <>
-      <div className={classNames(Styles.maincontainer)}>
-        <Container
-          className={classNames(
-            "p-2",
-            "text-start",
-            "animate__animated",
-            "animate__bounce"
-          )}
-        >
-          <div className={classNames(Styles.heading)}>Contact Me</div>
-          <div className="break"></div>
-          <div
-            className={classNames(
-              Styles.addresscontainer,
-              "animate__animated",
-              "animate__bounce"
-            )}
-          >
-            <Row>
-              <Col sm={6} className="p-2">
-                <div className={classNames(Styles.dContainer)}>
-                  <div className={classNames(Styles.c1)}>
-                    <img src={images.logo17} alt="Address" />
-                    <i>Address</i>
-                    <div className={classNames(Styles.c2)}>
-                      <p>
-                        Home Town:&nbsp;&nbsp;70 Foot Road, Solapur, 413006.
-                      </p>
-                      <p>
-                        Current Location:&nbsp;&nbsp;Kale Padal, Hadapsar, Pune,
-                        411028.
-                      </p>
-                      <p>
-                        (+91)&nbsp;&nbsp;917-280-4246&nbsp;&nbsp;(Call /
-                        What's&nbsp; App)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Col>
-              <Col sm={6} className="p-2">
-                <div className={classNames(Styles.dContainer)}>
-                  <div className={classNames(Styles.c1)}>
-                    <img src={images.logo19} alt="Social Media" />
-                    <i>Social Media</i>
-                    <div className={classNames(Styles.c2)}>
-                      <div className={classNames(Styles.iconcontainer)}>
-                        <a
-                          href="https://www.linkedin.com/in/tejas-jawalkar-b4b1a0180/"
-                          target="_blank"
-                          className={Styles.icon}
-                        >
-                          <FaLinkedin />
-                        </a>
-                        <a
-                          href="https://github.com/TejasJawalkar?tab=repositories"
-                          target="_blank"
-                          className={Styles.icon}
-                        >
-                          <FaGithub />
-                        </a>
-                        <a
-                          className={Styles.icon}
-                          href="https://bitbucket.org/assignmentandstudy/workspace/overview/"
-                          target="_blank"
-                        >
-                          <FaBitbucket />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
-              </Col>
-            </Row>
-            <Row>
-              <Col sm={12}>
-                <div className={classNames(Styles.eContainer)}>
-                  <div className={classNames(Styles.c3)}>
-                    <img src={images.logo20} alt="Connect Me" />
+    <div className={Styles.maincontainer}>
+      <Container className="p-3">
+        <div className={Styles.heading}>Contact Me</div>
 
-                    <i>Connect Me </i>
-                  </div>
-                  <div className={classNames(Styles.c4)}>
-                    <Container fluid>
-                      <Card
-                        style={{ backgroundColor: "transparent" }}
-                        className="shadow-none border-1 mt-2"
-                      >
-                        <Card.Body className="border-0">
-                          <form ref={form} onSubmit={sendEmail}>
-                            <Row className="d-flex justify-content-center">
-                              <Col md={5} className="mt-1">
-                                <Form.Control
-                                  className="shadow-none rounded-0 input"
-                                  placeholder="Sender Full Name"
-                                  type="text"
-                                  name="name"
-                                  ref={nameRef}
-                                  onChange={(e) => setName(e.target.value)}
-                                  onBlur={nameCheck}
-                                />
-                                {nameError ? (
-                                  <div className="text-danger">{nameError}</div>
-                                ) : null}
-                              </Col>
-                              <Col md={5} className="mt-1">
-                                <Form.Control
-                                  className=" shadow-none rounded-0 input"
-                                  placeholder="Sender Email"
-                                  type="email"
-                                  name="email"
-                                  ref={emailRef}
-                                  onChange={(e) => setEmail(e.target.value)}
-                                  onBlur={emailCheck}
-                                />
-                                {emailError ? (
-                                  <div className="text-danger">
-                                    {emailError}
-                                  </div>
-                                ) : null}
-                              </Col>
-                            </Row>
-                            <Row className="d-flex justify-content-center mt-2">
-                              <Col md={10}>
-                                <Form.Control
-                                  className=" shadow-none rounded-0 input"
-                                  placeholder="Subject"
-                                  type="text"
-                                  name="subject"
-                                  ref={subjectRef}
-                                  onChange={(e) => setSubject(e.target.value)}
-                                  onBlur={subjectCheck}
-                                />
-                                {subjectError ? (
-                                  <div className="text-danger">
-                                    {subjectError}
-                                  </div>
-                                ) : null}
-                              </Col>
-                            </Row>
-                            <Row className="d-flex justify-content-center mt-2">
-                              <Col md={10}>
-                                <Form.Control
-                                  className="shadow-none rounded-0"
-                                  as="textarea"
-                                  placeholder="Message"
-                                  name="message"
-                                  ref={messageRef}
-                                  onChange={(e) => setMessage(e.target.value)}
-                                  onBlur={messageCheck}
-                                />
-                                {messageError ? (
-                                  <div className="text-danger">
-                                    {messageError}
-                                  </div>
-                                ) : null}
-                              </Col>
-                            </Row>
-                            <div className="dropdown-divider"></div>
-                            <Row className="mt-4">
-                              <Col className="text-end" md={10}>
-                                <input
-                                  type="submit"
-                                  disabled={data}
-                                  className={classNames(
-                                    Styles.formbtn,
-                                    "w-25",
-                                    "btn",
-                                    "btn-outline-info",
-                                    "rounded-0 p-2"
-                                  )}
-                                  value="Send"
-                                />
-                              </Col>
-                            </Row>
-                          </form>
-                        </Card.Body>
-                      </Card>
-                    </Container>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </div>
-        </Container>
-      </div>
-    </>
+        {/* ================= Address & Social Media Section ================= */}
+        <Row className="mt-4">
+          {/* ADDRESS CARD */}
+          <Col md={6} className="mt-3">
+            <div className={Styles.glassCard}>
+              <div className="d-flex align-items-center gap-3">
+                <img src={images.logo17} alt="Address" height="55" />
+                <h5 className="m-0">Address</h5>
+              </div>
+
+              <div className="mt-3">
+                <p>Home Town: 70 Foot Road, Solapur, 413006.</p>
+                <p>Current: Kale Padal, Hadapsar, Pune, 411028.</p>
+                <p>(+91) 917-280-4246 (Call/WhatsApp)</p>
+              </div>
+            </div>
+          </Col>
+
+          {/* SOCIAL MEDIA CARD */}
+          <Col md={6} className="mt-3">
+            <div className={Styles.glassCard}>
+              <div className="d-flex align-items-center gap-3">
+                <img src={images.logo19} alt="Social" height="55" />
+                <h5 className="m-0">Social Media</h5>
+              </div>
+
+              <div className="d-flex mt-4 gap-3">
+                <a
+                  className={`${Styles["icon-round"]} ${Styles["icon-ln"]}`}
+                  href="https://www.linkedin.com/in/tejas-jawalkar-b4b1a0180/"
+                  target="_blank"
+                >
+                  <FaLinkedin />
+                </a>
+
+                <a
+                  className={`${Styles["icon-round"]} ${Styles["icon-gh"]}`}
+                  href="https://github.com/TejasJawalkar?tab=repositories"
+                  target="_blank"
+                >
+                  <FaGithub />
+                </a>
+
+                <a
+                  className={`${Styles["icon-round"]} ${Styles["icon-bb"]}`}
+                  href="https://bitbucket.org/assignmentandstudy/workspace/overview/"
+                  target="_blank"
+                >
+                  <FaBitbucket />
+                </a>
+              </div>
+            </div>
+          </Col>
+        </Row>
+
+        {/* ================= CONTACT FORM ================= */}
+        <Row className="mt-4">
+          <Col md={12}>
+            <div className={Styles.glassCard}>
+              <div className="d-flex align-items-center gap-3 mb-3">
+                <img src={images.logo20} alt="Connect" height="55" />
+                <h5 className="m-0">Connect With Me</h5>
+              </div>
+
+              <form ref={form} onSubmit={sendEmail}>
+                <Row className="mt-3">
+                  <Col md={6}>
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      ref={nameRef}
+                      onChange={(e) => setName(e.target.value)}
+                      onBlur={nameCheck}
+                    />
+                    {nameError && (
+                      <div className="text-danger">{nameError}</div>
+                    )}
+                  </Col>
+
+                  <Col md={6}>
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      ref={emailRef}
+                      onChange={(e) => setEmail(e.target.value)}
+                      onBlur={emailCheck}
+                    />
+                    {emailError && (
+                      <div className="text-danger">{emailError}</div>
+                    )}
+                  </Col>
+                </Row>
+
+                <Row className="mt-3">
+                  <Col md={12}>
+                    <input
+                      type="text"
+                      placeholder="Subject"
+                      ref={subjectRef}
+                      onChange={(e) => setSubject(e.target.value)}
+                      onBlur={subjectCheck}
+                    />
+                    {subjectError && (
+                      <div className="text-danger">{subjectError}</div>
+                    )}
+                  </Col>
+                </Row>
+
+                <Row className="mt-3">
+                  <Col md={12}>
+                    <textarea
+                      placeholder="Message"
+                      rows={4}
+                      ref={messageRef}
+                      onChange={(e) => setMessage(e.target.value)}
+                      onBlur={messageCheck}
+                    ></textarea>
+                    {messageError && (
+                      <div className="text-danger">{messageError}</div>
+                    )}
+                  </Col>
+                </Row>
+
+                <Row className="mt-4">
+                  <Col className="text-end">
+                    <button
+                      className="btn btn-outline-info formbtn"
+                      disabled={data}
+                      type="submit"
+                    >
+                      Send
+                    </button>
+                  </Col>
+                </Row>
+              </form>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };

@@ -1,10 +1,14 @@
+/* =============================
+   MAIN CONTAINER
+============================= */
 .container {
-  background-color: transparent;
-  color: white;
-  padding: 1.5rem;
-  /* Added padding for better readability */
-  word-spacing: 0rem;
-  letter-spacing: 0rem;
+     background-color: transparent;
+    color: white;
+    padding: 1.5rem;
+    letter-spacing: 0;
+    word-spacing: 0;
+    height: 85vh;
+    overflow: hidden;
 }
 
 .detailscontainer {
@@ -12,20 +16,22 @@
   margin-top: 10rem !important;
 }
 
+/* =============================
+   HEADINGS (DESKTOP)
+============================= */
 .ch1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
-  font-weight: bold;
   position: absolute;
   top: 10rem;
   left: 10rem;
   font-size: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  font-weight: bold;
 }
 
 .ch2 {
   position: absolute;
   top: 15rem;
   left: 10rem;
-  line-break: normal;
   font-size: 2.2rem;
 }
 
@@ -33,156 +39,213 @@
   position: absolute;
   top: 17.5rem;
   left: 10rem;
-  line-break: normal;
   font-size: 2.2rem;
 }
 
+/* =============================
+   RESUME BUTTON
+============================= */
 .resumebtn {
   position: absolute;
   top: 22rem;
-  left: 20rem;
+  left: 21rem;
   width: 8.5rem;
   height: 4rem;
+  padding: 1rem;
+  border-radius: 75%;
   background-color: transparent;
   color: white;
-  box-shadow: none !important;
-  border-radius: 75%;
-  padding: 1rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
   text-decoration: none;
-
 }
 
-
-.resumebtn>img{
-  position: relative;
-  top:-0.2rem;
-  right: -0.3rem;
+.resumebtn img {
   width: 1.5rem;
+  margin-left: 5px;
 }
 
-.contactbtn{
+/* =============================
+   CONTACT BUTTON
+============================= */
+.contactbtn {
   position: absolute;
+ left: 22rem;
+  top: 27rem;
   color: white;
-  box-shadow: none !important;
   font-size: 1rem;
   text-decoration: none;
 }
 
-
+/* =============================
+   SOCIAL ICONS
+============================= */
 .iconcontainer1 {
-  display: flex; /* Removed duplicate display: block */
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  position: absolute; /* Positioning to overlay correctly */
-  top: 30rem; /* Adjust this value as necessary for your layout */
-  left: 17rem; /* Adjust this value as necessary for your layout */
+  position: absolute;
+  top: 30rem;
+  left: 17rem;
   padding: 10px;
-  z-index: 2; /* Ensure icons are above particles */
+  z-index: 2;
 }
 
 .icon {
-  font-size:4rem;
-  color: white;
+  font-size: 1.7rem;
   height: 3rem;
   width: 3rem;
-  margin: 5px; /* Added margin for spacing between icons */
-  display: flex; /* Centering the icon content */
-  align-items: center; /* Align items vertically */
-  justify-content: center; /* Align items horizontally */
-  background-color: rgba(255, 255, 255, 0.1); /* Optional: semi-transparent background */
-  border-radius: 50%; /* Optional: rounded icons */
-  
-}
-
-.icon:nth-child(1)
-{
-  font-size: 1.7rem;
-}
-
-.icon:nth-child(2)
-{
-  font-size: 1.7rem;
-}
-
-.icon:nth-child(3)
-{
-  font-size: 1.7rem;
-}
-
-
-.icon:hover:nth-child(1)
-{
-  background-color: #0077B5;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
   color: white;
+  transition: 0.3s;
 }
 
+.icon:hover:nth-child(1) {
+  background: #0077B5;
+}
 
-.icon:hover:nth-child(2)
-{
-  background-color: white;
+.icon:hover:nth-child(2) {
+  background: white;
   color: black;
 }
-.icon:hover:nth-child(3)
-{
-  background-color: #1A74ED;
-  color: white;
+
+.icon:hover:nth-child(3) {
+  background: #1A74ED;
 }
 
+/* ============================================================
+   MOBILE: SCREEN BELOW 576px
+============================================================ */
 @media (max-width: 576px) {
+
+  /* Headings */
   .ch1 {
-    content: "Tejas Jawalkar";
-    position: absolute;
-    top: 10rem;
+    top: 4rem;
     left: 1.5rem;
-    list-style: none;
     font-size: 2.5rem;
   }
 
   .ch2 {
-    position: absolute;
-    top: 16rem;
-    left:2.1rem;
-    font-size: 1.2rem;
+    top: 10rem;
+    left: 1.8rem;
+    font-size: 1.3rem;
   }
+
   .ch3 {
-    position: absolute;
-    top: 18rem;
-    left: 2.1rem;
-    font-size: 1.2rem;
+    top: 13rem;
+    left: 1rem;
+    font-size: 1.3rem;
+  }
+
+  /* Resume Button */
+  .resumebtn {
+    top: 19rem;
+    left: 8rem;
+    width: 7rem;
+    height: 3rem;
+    font-size: 1.1rem;
+  }
+
+  /* Contact */
+  .contactbtn {
+    top: 22rem;
+    left: 8.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Social Icons */
+  .iconcontainer1 {
+    top: 26rem;
+    left: 5rem;
+    padding: 5px;
+  }
+
+  .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* ============================================================
+   TABLET: SCREEN 577px – 768px
+============================================================ */
+@media (min-width: 577px) and (max-width: 768px) {
+
+  .ch1 {
+    top: 9rem;
+    left: 5rem;
+    font-size: 2.8rem;
+  }
+
+  .ch2 {
+    top: 14rem;
+    left: 5rem;
+    font-size: 1.7rem;
+  }
+
+  .ch3 {
+    top: 16.5rem;
+    left: 5rem;
+    font-size: 1.7rem;
   }
 
   .resumebtn {
-    position: absolute;
-    top: 30rem;
-    left: 7.5rem;
-    padding: 12px;
+  top: 27rem;
+        left: 20rem;
+
   }
 
-  .contactbtn{
-  position: absolute;
-  left:8.4rem;
-  color: white;
-  box-shadow: none !important;
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-  .iconcontainer1{
-    display: none;
+  .contactbtn {
+    top: 32rem;
+        left: 21rem;
   }
 
-  
-.iconcontainer1{
-  display: flex; /* Removed duplicate display: block */
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: absolute; /* Positioning to overlay correctly */
-  top: 40rem; /* Adjust this value as necessary for your layout */
-  left: 4.2rem; /* Adjust this value as necessary for your layout */
-  padding: 5px;
-  z-index: 2; /* Ensure icons are above particles */
+  .iconcontainer1 {
+    top: 36rem;
+        left: 16rem;
+  }
 }
 
+/* ============================================================
+   LARGE TABLET / SMALL LAPTOP (769px – 1024px)
+============================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .ch1 {
+    top: 10rem;
+    left: 7rem;
+  }
+
+  .ch2 {
+    top: 15rem;
+    left: 7rem;
+  }
+
+  .ch3 {
+    top: 17.5rem;
+    left: 7rem;
+  }
+
+  .resumebtn {
+    top: 33rem;
+        left: 28rem;
+  }
+
+  .contactbtn {
+    top: 39rem;
+        left: 29rem;
+  }
+
+  .iconcontainer1 {
+            top: 46rem;
+        left: 25rem;
+  }
 }

@@ -1,14 +1,27 @@
 .maincontainer {
   height: auto;
 }
+
+.ServiceWrapper
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: -15rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
 .heading {
   display: inline-block;
   font-weight: bold;
   letter-spacing: 1pt;
   margin-right: 0;
-  text-decoration: none;
   position: relative;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .heading::after {
@@ -17,83 +30,95 @@
   width: 4px;
   height: 2px;
   background: rgb(255, 143, 143);
-  transition: width 0.15s;
+  transition: width 0.3s ease;
 }
 
 .heading:hover::after {
-  width: 16%;
-  transition: width 0.7s;
+  width: 80%;
 }
 
 .Servicescontainer {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+  justify-items: center;
 }
 
 .services {
   position: relative;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  width: 20rem;
-  height: 26rem;
+  width:100vw;
   padding: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 25px, rgba(0, 0, 0, 0.15) 0px 5px 10px;
+  margin-top: 7rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 25px,
+              rgba(0, 0, 0, 0.15) 0px 5px 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-.services:hover{
-  
-  box-shadow:  rgba(114, 83, 83, 0.2) 0px 15px 25px, rgba(114, 83, 83, 0.2) 0px 5px 10px;
-
+.services:hover {
+  transform: translateY(-4px);
+  box-shadow: rgba(114, 83, 83, 0.25) 0px 15px 25px,
+              rgba(114, 83, 83, 0.20) 0px 5px 10px;
 }
 
 .services img {
   position: absolute;
-  top: -1.5rem;
-  /* Adjust to make the image overlap the container */
+  top: -2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 3.5rem;
+  width: 4rem;
   padding: 8px;
-  background-color: tr;
-  border-radius: 10%;
-  box-shadow: #4988fd 0px 1px 10px 1px, #4988fd 0px 18px 16px -28px;
+  border-radius: 12px;
+  background: #000829;
+  box-shadow: #4988fd 0px 1px 10px 1px;
 }
 
-.services>.headers{
+.services > .headers {
   font-size: 20px;
   margin-top: 2.5rem;
   text-align: center;
+  font-weight: 600;
 }
 
-.services p{
+/* inner text */
+.services p {
   margin-top: 1rem;
-  word-spacing: 0rem;
-  letter-spacing: 0rem;
   font-size: 15px;
   text-align: justify;
+  letter-spacing: 0px;
   word-spacing: 1px;
+  line-height: 1.4rem;
 }
 
+/* 📱 Mobile View */
 @media (max-width: 576px) {
   .Servicescontainer {
-    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .services {
-    position: relative;
-    right: 1rem;
-    margin-bottom: 1rem;
-    width: 20rem;
-    height: 28rem;
+    width: 100%;
+    height: auto;
+    right: 0;   /* remove weird shift */
   }
 
-  .services img {
-    position: absolute;
-    top: -1.5rem;
+  .services p {
+    font-size: 0.85rem;
+  }
+}
+
+/* 📱📲 Tablet View */
+@media (max-width: 768px) {
+  .Servicescontainer {
+    justify-content: center;
   }
 
-  .services p{
-    font-size: 0.8rem;
+  .services {
+    width: 18rem;
+    height: auto;
   }
 }
