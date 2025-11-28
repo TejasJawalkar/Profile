@@ -13,9 +13,6 @@ import images from "./json/exports";
 export const Home = () => {
   //#region
   const [init, setInit] = useState(false);
-  const downloadResume = () => {
-    console.log("download first");
-  };
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -141,7 +138,7 @@ export const Home = () => {
             >
               I’m a{" "}
               <u style={{ textDecorationColor: "#4988fd" }}>
-                Software Engineer
+                <b>FullStack Developer</b>
               </u>
             </h2>
 
@@ -152,8 +149,8 @@ export const Home = () => {
                 styles.ch3
               )}
             >
-              With over <strong>3+ years</strong> of experience building
-              scalable web applications
+              With over <b>3+</b> years of experience building scalable web
+              applications.
             </p>
 
             {/* Icons Section */}
