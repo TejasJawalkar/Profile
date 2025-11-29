@@ -29,8 +29,7 @@ const experiences = [
   {
     id: 3,
     position: "Full Stack Developer (.NET Developer)",
-    company:
-      "Brainlines Solutions (Client: Deutsche Telecom Clinical Solutions, T-System)",
+    company: "Brainlines Solutions (Client: T-System)",
     duration: "Jul 2022 - Present",
     description: [
       "Developed and maintained healthcare modules using .NET Core, C#, Web API, and Oracle.",
