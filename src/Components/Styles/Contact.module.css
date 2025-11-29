@@ -32,7 +32,7 @@
 }
 
 /* ===================== GLASS CARD ===================== */
-.glass-card {
+.glassCard {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -44,16 +44,20 @@
   box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
 }
 
-.glass-card:hover {
+.glassCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 -1px 8px rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(114, 83, 83, 0.25) 0px 15px 25px, rgba(114, 83, 83, 0.20) 0px 5px 10px;
 }
 
 /* ===================== ICON WRAPPER ===================== */
-.icon-wrap {
+
+
+
+.iconWrap {
   display: flex;
   align-items: center;
   gap: 1rem;
+  height: 8.5rem;
 }
 
 .icon-round {
@@ -124,9 +128,7 @@ textarea:focus {
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
-  .iconcontainer {
-    justify-content: center;
-  }
+
 
   .heading {
     position: absolute;

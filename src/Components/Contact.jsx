@@ -122,31 +122,32 @@ export const Contact = () => {
                 <img src={images.logo19} alt="Social" height="55" />
                 <h5 className="m-0">Social Media</h5>
               </div>
+              <div className={Styles.iconcontainer}>
+                <div className={Styles.iconWrap}>
+                  <a
+                    className={`${Styles["icon-round"]} ${Styles["icon-ln"]}`}
+                    href="https://www.linkedin.com/in/tejas-jawalkar-b4b1a0180/"
+                    target="_blank"
+                  >
+                    <FaLinkedin />
+                  </a>
 
-              <div className="d-flex mt-4 gap-3">
-                <a
-                  className={`${Styles["icon-round"]} ${Styles["icon-ln"]}`}
-                  href="https://www.linkedin.com/in/tejas-jawalkar-b4b1a0180/"
-                  target="_blank"
-                >
-                  <FaLinkedin />
-                </a>
+                  <a
+                    className={`${Styles["icon-round"]} ${Styles["icon-gh"]}`}
+                    href="https://github.com/TejasJawalkar?tab=repositories"
+                    target="_blank"
+                  >
+                    <FaGithub />
+                  </a>
 
-                <a
-                  className={`${Styles["icon-round"]} ${Styles["icon-gh"]}`}
-                  href="https://github.com/TejasJawalkar?tab=repositories"
-                  target="_blank"
-                >
-                  <FaGithub />
-                </a>
-
-                <a
-                  className={`${Styles["icon-round"]} ${Styles["icon-bb"]}`}
-                  href="https://bitbucket.org/assignmentandstudy/workspace/overview/"
-                  target="_blank"
-                >
-                  <FaBitbucket />
-                </a>
+                  <a
+                    className={`${Styles["icon-round"]} ${Styles["icon-bb"]}`}
+                    href="https://bitbucket.org/assignmentandstudy/workspace/overview/"
+                    target="_blank"
+                  >
+                    <FaBitbucket />
+                  </a>
+                </div>
               </div>
             </div>
           </Col>
