@@ -3,8 +3,6 @@ import React, { useRef, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import Styles from "./Styles/Contact.module.css";
 import images from "./json/exports";
-import Form from "react-bootstrap/Form";
-import { Card } from "react-bootstrap";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaBitbucket } from "react-icons/fa";

@@ -9,6 +9,7 @@ const experiences = [
       "Gained experience in creating RESTful APIs and performing unit testing for code reliability.",
       "Participated in Agile sprints and assisted in debugging and documentation, improving system performance.",
     ],
+    current: false,
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const experiences = [
       "Enhanced system performance by optimizing database interactions using Entity Framework / Dapper.",
       "Integrated APIs with Angular (V16) and performed integration testing with comprehensive test cases.",
     ],
+    current: false,
   },
   {
     id: 3,
@@ -41,6 +43,7 @@ const experiences = [
       "Conducted static code analysis and production log review to enhance code quality and system stability.",
       "Participated in Scaled Agile sprint planning and estimations.",
     ],
+    current: true,
   },
 ];
 

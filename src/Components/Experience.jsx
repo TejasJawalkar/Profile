@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Styles/Experience.module.css";
 import { Col, Container, Row } from "reactstrap";
 import experiences from "./json/Experience.js";
+import {
+  faLightbulb,
+  faPooBolt,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Experience = () => {
   const [ExperienceData, setExperienceData] = useState([]);
@@ -21,7 +27,15 @@ export const Experience = () => {
                 <Col md={10}>
                   <h2 className={styles.position}>{exp.position}</h2>
                 </Col>
-                <Col md={2}>{}</Col>
+                <Col md={2} className="text-end">
+                  <span>
+                    {" "}
+                    <FontAwesomeIcon
+                      icon={faLightbulb}
+                      className={exp.current ? "text-warning" : "text-gray"}
+                    />
+                  </span>{" "}
+                </Col>
               </Row>
 
               <h2 className={styles.company}>

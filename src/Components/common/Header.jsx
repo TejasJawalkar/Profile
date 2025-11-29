@@ -7,11 +7,10 @@ import {
   faBriefcase,
   faHome,
   faInfo,
-  faMoon,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Sidebar.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { faTools } from "@fortawesome/free-solid-svg-icons/faTools";
 
 export const Header = () => {
