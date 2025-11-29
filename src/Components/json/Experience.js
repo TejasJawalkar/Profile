@@ -15,7 +15,7 @@ const experiences = [
     id: 2,
     position: "Software Engineer",
     company: "Splashgain Technologies Solutions Pvt. Ltd.",
-    duration: "Aug 2023 - Jun 2024",
+    duration: "Aug 2022 - Jun 2024",
     description: [
       "Developed reusable front-end components using ASP.NET and .NET Core, ensuring responsiveness and cross-browser compatibility.",
       "Engineered RESTful APIs to support dynamic applications and optimized data exchange efficiency.",
