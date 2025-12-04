@@ -3,9 +3,7 @@ import styles from "./Styles/Experience.module.css";
 import { Col, Container, Row } from "reactstrap";
 import experiences from "./json/Experience.js";
 import {
-  faLightbulb,
-  faPooBolt,
-  faStar,
+  faLightbulb
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
