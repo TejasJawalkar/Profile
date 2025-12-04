@@ -1,13 +1,25 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Styles/About.module.css";
 import classNames from "classnames";
 import { Col, Container, Row } from "reactstrap";
 import images from "./json/exports";
+import { interested, certifications } from "./json/interested.js";
 
 export const About = () => {
+  const [interestedData, SetInterestedData] = useState([]);
+  const [CertificationsData, SetCertificationsData] = useState([]);
+
   let [Age, setAge] = useState();
   let [cyear, setCYear] = useState(0);
   let dob = "12/05/1998";
+
+  const chunkArray = (arr, size) => {
+    const result = [];
+    for (let i = 0; i < arr.length; i += size) {
+      result.push(arr.slice(i, i + size));
+    }
+    return result;
+  };
 
   useEffect(() => {
     const currentYear = new Date().getFullYear();
@@ -17,7 +29,10 @@ export const About = () => {
     const birthYear = year;
 
     setAge(currentYear - birthYear);
-  }, [dob]);
+    SetInterestedData(interested);
+    SetCertificationsData(certifications);
+  }, [dob, interestedData, CertificationsData]);
+
   return (
     <>
       <Container className={classNames("p-2 pb-2 text-start")}>
@@ -357,153 +372,32 @@ export const About = () => {
             <Container
               className={classNames("text-start", styles.certifiacates)}
             >
-              <div>
-                <a
-                  href="https://drive.google.com/uc?export=download&amp;id=1Ef_PxcseyAHjR9lQuN7QfxxNneOSjmKr"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  Git Essential Training (Linkedin)
-                  <img src={images.open} alt="Redirect" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://drive.google.com/uc?export=download&amp;id=1__8i1EvCZFx_Coe3GiblnwJrU-1WV04A"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Building Modern Projects with React (Linkedin)
-                  <img src={images.open} alt="Redirect" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://www.linkedin.com/learning/certificates/1c8db6198b8a8d90ead1527aefea77e393a10f42ca3f40bcef4986fa57b707d2"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ASP.NET Core MVC (Linkedin)
-                  <img src={images.open} alt="Redirect" />
-                </a>
-              </div>
+              {CertificationsData.map((cert) => (
+                <div key={cert.id}>
+                  <a href={cert.link} target="_blank" rel="noreferrer">
+                    {cert.title}
+                    <img src={images.open} alt="Redirect" />
+                  </a>
+                </div>
+              ))}
             </Container>
           </div>
           <div className={classNames(styles.interestcontainer)}>
             <div className="break"></div>
             <p className={classNames(styles.heading)}>Interested In</p>
-            <Row className="text-center">
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo1} alt="HTML" />
-                  <i>HTML</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo2} alt="CSS" />
-                  <i>CSS</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo3} alt="JavaScript" />
-                  <i>JavaScript</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo4} alt="Bootstrap" />
-                  <i>Bootstrap</i>
-                </div>
-              </Col>
-            </Row>
 
-            <Row className="text-center">
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo5} alt="NPM" />
-                  <i>NPM</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo6} alt="ReactJS" />
-                  <i>ReactJS</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo7} alt="NodeJS" />
-                  <i>NodeJS</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo8} alt="React-Bootstrap" />
-                  <i>React-Bootstrap</i>
-                </div>
-              </Col>
-            </Row>
-
-            <Row className="text-center">
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo9} alt="GitHub" />
-                  <i>GitHub</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img
-                    src={images.logo10}
-                    style={{ border: "1px solid #c0c0c0" }}
-                    alt="ExpressJS"
-                  />
-                  <i>ExpressJS</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo11} alt="Angular" />
-                  <i>Angular</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo12} alt="Vite" />
-                  <i>Vite</i>
-                </div>
-              </Col>
-            </Row>
-
-            <Row className="text-center">
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo13} alt="Net & .Net Core" />
-                  <i>.Net & .Net Core</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo14} alt="SQL & NoSQL" />
-                  <i>SQL & NoSQL</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={classNames(styles.interesticon)}>
-                  <img src={images.logo15} alt="DSA" />
-                  <i>Data Structure</i>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className={styles.interesticon}>
-                  <img src={images.logo16} alt="Crystal Report" />
-                  <i>Crystal Report</i>
-                </div>
-              </Col>
-            </Row>
+            {chunkArray(interestedData, 4).map((group, rowIndex) => (
+              <Row key={rowIndex} className="text-center">
+                {group.map((item) => (
+                  <Col key={item.id} sm={3}>
+                    <div className={styles.interesticon}>
+                      <img src={images[item.logo]} alt={item.alt} />
+                      <i>{item.title}</i>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            ))}
           </div>
         </div>
       </Container>
