@@ -30,7 +30,7 @@ const experiences = [
     id: 3,
     position: "Full Stack Developer (.NET Developer)",
     company: "Brainlines Solutions Pvt. Ltd. (Client: T-System)",
-    duration: "Jul 2022 - Present",
+    duration: "Jan 2025 - Present",
     description: [
       "Developed and maintained healthcare modules using .NET Core, C#, Web API, and Oracle.",
       "Engineered real-time data visualization dashboards in AngularJS + TypeScript for a healthcare client (T-Systems), enabling clinicians to monitor live patient metrics.",
