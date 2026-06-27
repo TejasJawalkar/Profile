@@ -7,8 +7,9 @@ import { FaGithub } from "react-icons/fa";
 import { FaBitbucket } from "react-icons/fa";
 import styles from "./Styles/Home.module.css";
 import classNames from "classnames";
-import resumepdf from "./images/Tejas_Jawalkar_FullStack_Developer_Resume.pdf";
 import images from "./json/exports";
+import linksConstants from "./constants/links_constants";
+import particleOptions from "./constants/particle_constants";
 
 export const Home = () => {
   //#region
@@ -23,77 +24,6 @@ export const Home = () => {
   }, []);
 
   const particlesLoaded = (container) => {};
-
-  const options = useMemo(
-    () => ({
-      background: {
-        color: {
-          value: "transparent",
-        },
-      },
-      fpsLimit: 100,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: false,
-            mode: "repulse",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 24,
-          },
-          repulse: {
-            distance: 500,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 100,
-          enable: false,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: {
-            default: "bounce",
-          },
-          random: true,
-          speed: 2,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 200,
-        },
-        opacity: {
-          value: 0.2,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          value: { min: 2, max: 5 },
-        },
-      },
-      detectRetina: true,
-    }),
-    []
-  );
   //#endregion
 
   return (
@@ -103,7 +33,7 @@ export const Home = () => {
           <Particles
             id="tsparticles"
             particlesLoaded={particlesLoaded}
-            options={options}
+            options={particleOptions}
             style={{ zIndex: 0, position: "absolute", top: 0, left: 0 }}
           />
         )}
@@ -115,7 +45,7 @@ export const Home = () => {
               className={classNames(
                 "animate__animated",
                 "animate__fadeInDown",
-                styles.ch1
+                styles.ch1,
               )}
             >
               <span
@@ -133,12 +63,12 @@ export const Home = () => {
               className={classNames(
                 "animate__animated",
                 "animate__fadeInUp",
-                styles.ch2
+                styles.ch2,
               )}
             >
               I’m a{" "}
               <u style={{ textDecorationColor: "#4988fd" }}>
-                <b>FullStack Developer</b>
+                <b>FullStack .Net Developer</b>
               </u>
             </h2>
 
@@ -146,11 +76,12 @@ export const Home = () => {
               className={classNames(
                 "animate__animated",
                 "animate__fadeInUp",
-                styles.ch3
+                styles.ch3,
               )}
             >
-              With over <b>3+</b> years of experience building scalable web
-              applications.
+              With over <b>3+</b> years of experience building scalable
+              enterprise applications using <br /> C#, ASP.NET Core, Angular,
+              SQL Server, REST APIs, and Clean Architecture.
             </p>
 
             {/* Icons Section */}
@@ -159,11 +90,11 @@ export const Home = () => {
                 "animate__animated",
                 "animate__fadeInUp",
                 "d-flex gap-4 mt-4",
-                styles.iconcontainer1
+                styles.iconcontainer1,
               )}
             >
               <a
-                href="https://www.linkedin.com/in/tejas-jawalkar-b4b1a0180/"
+                href={linksConstants.LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.icon}
@@ -172,7 +103,7 @@ export const Home = () => {
                 <FaLinkedin />
               </a>
               <a
-                href="https://github.com/TejasJawalkar?tab=repositories"
+                href={linksConstants.GIT_HUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.icon}
@@ -181,7 +112,7 @@ export const Home = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://bitbucket.org/assignmentandstudy/workspace/overview/"
+                href={linksConstants.BIT_BUCKET_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.icon}
@@ -192,9 +123,9 @@ export const Home = () => {
             </div>
 
             {/* Buttons Section */}
-            <div className="d-flex flex-wrap justify-content-center gap-3 mt-5">
+            <div className={classNames(styles.buttonContainer)}>
               <a
-                href={resumepdf}
+                href={linksConstants.RESUME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={classNames(styles.resumebtn, "btn")}
