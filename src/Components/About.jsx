@@ -38,28 +38,21 @@ export const About = () => {
       <Container className={classNames("p-2 pb-2 text-start")}>
         <div className={styles.maincontainer}>
           <div
-            className={classNames(
-              styles.heading,
-              styles.title,
-              "animate__animated",
-              "animate__bounceIn"
-            )}
-          >
-            Know More about Me....
-          </div>
-          <div className="break"></div>
+            className={classNames("animate__animated", "animate__bounceIn")}
+          ></div>
+
           <div
             className={classNames(
               styles.imagewrapper,
               "animate__animated",
-              "animate__bounceIn"
+              "animate__bounceIn",
             )}
           >
             <img
               className={classNames(
                 "animate__animated",
                 "animate__bounceIn",
-                styles.ppimage
+                styles.ppimage,
               )}
               src={images.ppimage}
               alt="Tejas S. Jawalkar"
@@ -69,7 +62,7 @@ export const About = () => {
             className={classNames(
               "animate__animated",
               "animate__bounceIn",
-              styles.content1
+              styles.content1,
             )}
           >
             <Container>
@@ -90,7 +83,7 @@ export const About = () => {
                 "mt-3 mb-3",
                 "animate__animated",
                 "animate__bounceIn",
-                styles.content2
+                styles.content2,
               )}
             >
               <div className={classNames(styles.ptext)}>
@@ -114,7 +107,7 @@ export const About = () => {
                 "mt-3 mb-3",
                 "animate__animated",
                 "animate__bounceIn",
-                styles.content2
+                styles.content2,
               )}
             >
               <div className={classNames(styles.ptext)}>
@@ -135,7 +128,7 @@ export const About = () => {
                 className={classNames(
                   styles.content3,
                   "animate__animated",
-                  "animate__bounceIn"
+                  "animate__bounceIn",
                 )}
               >
                 Over 3 years of full-time experience in Web Application
