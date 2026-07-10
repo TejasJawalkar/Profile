@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Styles/Experience.module.css";
 import { Col, Container, Row } from "reactstrap";
 import experiences from "./json/Experience.js";
-import {
-  faLightbulb
-} from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Experience = () => {
@@ -17,7 +15,6 @@ export const Experience = () => {
   return (
     <>
       <Container className={styles.maincontainer}>
-        <h2 className={styles.heading}>Experiences</h2>
         <div className={styles.experienceWrapper}>
           {ExperienceData.sort((a, b) => a.id - b.id).map((exp) => (
             <div key={exp.id} className={styles.experienceCard}>

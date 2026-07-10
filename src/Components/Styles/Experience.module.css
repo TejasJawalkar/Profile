@@ -11,7 +11,7 @@
   text-decoration: none;
   position: relative;
   top: 1rem;
-  left: -31rem;
+  left: 2rem;
   font-size: 2rem;
   margin-bottom: 1rem;
   display: inline-block;
@@ -33,9 +33,12 @@
 /* WRAPPER */
 .experienceWrapper {
   width: 100%;
-  max-width: 850px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 /* CARD */
@@ -78,39 +81,13 @@
   padding-left: 0;
 }
 
-
-/* ---------- RESPONSIVE BREAKPOINTS ---------- */
-
-/* Tablet (≤1024px) */
-@media (max-width: 1024px) {
-  .heading {
-    font-size: 1.9rem;
-    position: relative;
-    top: 2rem;
-    left: -16rem;
-  }
-
-  .position {
-    font-size: 1.5rem;
-  }
-
-  .company {
-    font-size: 1rem;
-  }
-}
-
-/* Mobile (≤768px) */
 @media (max-width: 768px) {
   .experienceWrapper {
-    margin-top: 1rem;
-    justify-content: flex-start;
+    grid-template-columns: 1fr;
   }
 
   .heading {
-    font-size: 1.7rem;
-    position: relative;
-        top: 0rem;
-        left: -17rem;
+    font-size: 1.7rem;  
   }
 
   .position {
@@ -121,14 +98,14 @@
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
   .experienceCard {
-    padding: 1rem;
+    padding: -19rem;
   }
 
   .heading {
     font-size: 1.6rem;
     position: relative;
     top: -1rem;
-    left: -6rem;
+    left: 0rem;
   }
 
   .position {

@@ -1,0 +1,23 @@
+.header{
+   display: inline-block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;  
+    top: 6rem;
+    left: 8rem;
+    color: #fff;
+}
+
+.header::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #ff8d8d;
+  display: block;
+  margin-top: 4px;
+  transition: width 0.4s ease;
+}
+
+.header:hover::after {
+  width: 80%;
+}

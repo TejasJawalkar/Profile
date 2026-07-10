@@ -2,15 +2,14 @@
   height: auto;
 }
 
-.ServiceWrapper
-{
+.ServiceWrapper {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: -15rem;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
 }
 
 
@@ -38,23 +37,21 @@
 }
 
 .Servicescontainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
-  margin-top: 1rem;
   width: 100%;
+  margin-top: 1rem;
   padding: 1rem;
-  justify-items: center;
 }
 
 .services {
   position: relative;
-  width:100vw;
+  width: 100%;
   padding: 1.5rem;
-  margin-top: 7rem;
+  margin-top: 3rem;
   border-radius: 10px;
+
   box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 25px,
               rgba(0, 0, 0, 0.15) 0px 5px 10px;
+
   transition: all 0.3s ease-in-out;
 }
 

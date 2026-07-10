@@ -18,14 +18,10 @@ export const Services = () => {
         className={classNames(
           "text-start",
           "animate__animated",
-          "animate__bounce"
+          "animate__bounce",
         )}
       >
-        <div className={classNames(Styles.heading, "text-start")}>
-          Services I Provide
-        </div>
         <div className={classNames(Styles.maincontainer)}>
-          <div className="break"></div>
           <div className={Styles.Servicescontainer}>
             <div className={Styles.ServiceWrapper}>
               {ServiceData.map((service) => (

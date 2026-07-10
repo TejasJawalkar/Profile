@@ -8,6 +8,7 @@ import { Services } from "../Services";
 import { Contact } from "../Contact";
 import { Experience } from "../Experience";
 import { Container } from "reactstrap";
+import { PageNavigationHeader } from "./PageNavigationHeader";
 import classNames from "classnames";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Router basename="">
           <Header />
           <div className={classNames("maincontent")}>
+            <PageNavigationHeader />
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="/About" element={<About />}></Route>

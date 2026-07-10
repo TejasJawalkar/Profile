@@ -71,7 +71,7 @@ export const Contact = () => {
         "service_zzfeav8",
         "template_pvidtoj",
         form.current,
-        "cyzp35x2_OwR_SVmn"
+        "cyzp35x2_OwR_SVmn",
       )
       .then(
         (result) => {
@@ -79,7 +79,7 @@ export const Contact = () => {
         },
         (error) => {
           console.log(error.text);
-        }
+        },
       );
     Swal.fire({
       title: `Hello ${name}`,
@@ -95,11 +95,7 @@ export const Contact = () => {
   return (
     <div className={Styles.maincontainer}>
       <Container className="p-3">
-        <div className={Styles.heading}>Contact Me</div>
-
-        {/* ================= Address & Social Media Section ================= */}
-        <Row className="mt-4">
-          {/* ADDRESS CARD */}
+        <Row className="mt-2">
           <Col md={6} className="mt-3">
             <div className={Styles.glassCard}>
               <div className="d-flex align-items-center gap-3">

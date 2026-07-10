@@ -1,45 +1,45 @@
 const Service = [
   {
     id: 1,
-    title: "Device Effective Design",
+    title: "Full Stack .NET Development",
+    image: "logo25",
     description:
-      "In today’s digital landscape, users browse websites across a wide range of devices. I create fully responsive designs that deliver a consistent, fast, and smooth experience across all screen sizes.",
-    image: "logo21",
+      "Develop scalable enterprise applications using C#, .NET Core, ASP.NET Core, Angular, and SQL Server. Build complete solutions from frontend UI to backend services and database design.",
   },
   {
     id: 2,
-    title: " User friendly",
+    title: "REST API Development & Integration",
+    image: "logo26",
     description:
-      "I ensure cross-browser compatibility across Chrome, Firefox, Microsoft Edge, and Safari to deliver a seamless and consistent user experience on all platforms.",
-    image: "logo22",
+      "Design secure and high-performance REST APIs with authentication, validation, and third-party integrations to enable seamless communication between systems.",
   },
   {
     id: 3,
-    title: "Freelancing",
+    title: "Angular Frontend Development",
+    image: "logo27",
     description:
-      " I offer flexible, high-quality freelancing services including scalable application development, performance                 optimization, module development, and API integration to support your project goals.",
-    image: "logo23",
+      "Create responsive and interactive user interfaces using Angular, TypeScript, RxJS, and Angular Material with a focus on performance and maintainability.",
   },
   {
     id: 4,
-    title: "Full Stack .NET Development",
+    title: "Database Design & Optimization",
+    image: "logo24",
     description:
-      " I specialize in building end-to-end web applications using.NET Core, C#, MVC, Web API, Angular, and SQL/Oracle. From UI design to backend architecture, I deliver secure, scalable, and enterprise-grade solutions.",
-    image: "logo25",
+      "Design efficient database schemas, develop stored procedures, optimize SQL queries, and improve application performance using SQL Server and Oracle.",
   },
   {
     id: 5,
-    title: "API Development & Integration",
+    title: "Application Support & Production Support",
+    image: "logo28",
     description:
-      "I develop powerful, secure, and high-performance RESTful APIs. I also integrate third-party services, handle data validation, and optimize API performance for smooth communication between systems.",
-    image: "logo26",
+      "Provide application monitoring, issue resolution, root cause analysis, incident management, and deployment support for production environments.",
   },
   {
     id: 6,
-    title: "Database Design & Optimization",
+    title: "Performance Optimization",
+    image: "logo29",
     description:
-      "With strong expertise in SQL Server and Oracle, I design efficient database schemas, write complex queries, and perform performance tuning to improve execution speed, reduce load time, and enhance system reliability.",
-    image: "logo24",
+      "Improve application and database performance through query tuning, API optimization, and efficient data processing techniques.",
   },
 ];
 

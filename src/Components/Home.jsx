@@ -80,8 +80,11 @@ export const Home = () => {
               )}
             >
               With over <b>3+</b> years of experience building scalable
-              enterprise applications using <br /> C#, ASP.NET Core, Angular,
-              SQL Server, REST APIs, and Clean Architecture.
+              enterprise applications using <br />
+              <span style={{ fontWeight: "bold" }}>
+                C#, ASP.NET Core, Angular, SQL Server, REST APIs, and Layered
+                Architecture.
+              </span>
             </p>
 
             {/* Icons Section */}
