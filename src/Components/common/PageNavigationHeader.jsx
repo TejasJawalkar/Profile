@@ -13,17 +13,23 @@ export const PageNavigationHeader = () => {
   else if (pathname === "/Services") pageName = "My Expertise & Services";
   else if (pathname === "/Contact") pageName = "Get In Touch";
   else if (pathname === "/Experience") pageName = "Experience";
+
+  console.log([]);
   return (
     <>
-      <h2
-        className={classNames(
-          Styles.header,
-          "animate__animated",
-          "animate__bounceIn",
-        )}
-      >
-        {pageName}
-      </h2>
+      {pathname != "/" ? (
+        <h2
+          className={classNames(
+            Styles.header,
+            "animate__animated",
+            "animate__bounceIn",
+          )}
+        >
+          {pageName}
+        </h2>
+      ) : (
+        ""
+      )}
     </>
   );
 };
