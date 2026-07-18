@@ -1,0 +1,30 @@
+<svg width="220" height="220" viewBox="0 0 220 220"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Connections -->
+  <g stroke="#433B78" stroke-width="8" stroke-linecap="round">
+    <line x1="110" y1="110" x2="110" y2="35"/>
+    <line x1="110" y1="110" x2="180" y2="70"/>
+    <line x1="110" y1="110" x2="180" y2="150"/>
+    <line x1="110" y1="110" x2="110" y2="185"/>
+    <line x1="110" y1="110" x2="40" y2="150"/>
+    <line x1="110" y1="110" x2="40" y2="70"/>
+  </g>
+
+  <!-- Center -->
+  <circle cx="110" cy="110" r="28"
+          fill="#67B5F7"
+          stroke="#433B78"
+          stroke-width="8"/>
+
+  <!-- Outer Nodes -->
+  <g fill="#67B5F7" stroke="#433B78" stroke-width="8">
+    <circle cx="110" cy="30" r="18"/>
+    <circle cx="180" cy="70" r="18"/>
+    <circle cx="180" cy="150" r="18"/>
+    <circle cx="110" cy="190" r="18"/>
+    <circle cx="40" cy="150" r="18"/>
+    <circle cx="40" cy="70" r="18"/>
+  </g>
+
+</svg>

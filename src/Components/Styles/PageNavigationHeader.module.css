@@ -1,23 +1,45 @@
-.header{
-   display: inline-block;
+.header {
+    display: inline-block;
+    position: relative;   /* Changed from fixed */
+
     font-size: 2.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;  
-    top: 6rem;
-    left: 8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
     color: #fff;
+
+    margin-bottom: 2rem;
 }
 
 .header::after {
-  content: "";
-  width: 40px;
-  height: 3px;
-  background: #ff8d8d;
-  display: block;
-  margin-top: 4px;
-  transition: width 0.4s ease;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin-top: 8px;
+    background: #ff8d8d;
+    transition: width .3s ease;
 }
 
 .header:hover::after {
-  width: 80%;
+    width: 80%;
+}
+
+@media (max-width: 992px) {
+    .header {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
 }

@@ -3,23 +3,26 @@ import styles from "./Styles/About.module.css";
 import classNames from "classnames";
 import { Col, Container, Row } from "reactstrap";
 import images from "./json/exports";
-import { interested, certifications } from "./json/interested.js";
+import {
+  Educations,
+  hobbies,
+  SkillsSet,
+  interested,
+  certifications,
+  sumarry,
+} from "./json/aboutsection.js";
 
 export const About = () => {
-  const [interestedData, SetInterestedData] = useState([]);
+  const [InterestedData, SetInterestedData] = useState([]);
+  const [EducationData, SetEducationData] = useState([]);
   const [CertificationsData, SetCertificationsData] = useState([]);
+  const [HobbiesData, SetHobbiesData] = useState([]);
+  const [SkillData, SetSkillData] = useState([]);
+  const [SumarryData, SetSumarryData] = useState("");
 
   let [Age, setAge] = useState();
   let [cyear, setCYear] = useState(0);
   let dob = "12/05/1998";
-
-  const chunkArray = (arr, size) => {
-    const result = [];
-    for (let i = 0; i < arr.length; i += size) {
-      result.push(arr.slice(i, i + size));
-    }
-    return result;
-  };
 
   useEffect(() => {
     const currentYear = new Date().getFullYear();
@@ -31,340 +34,134 @@ export const About = () => {
     setAge(currentYear - birthYear);
     SetInterestedData(interested);
     SetCertificationsData(certifications);
-  }, [dob, interestedData, CertificationsData]);
+    SetHobbiesData(hobbies);
+    SetSkillData(SkillsSet);
+    SetSumarryData(sumarry);
+    SetEducationData(Educations);
+  }, [
+    dob,
+    InterestedData,
+    CertificationsData,
+    SetHobbiesData,
+    SetSkillData,
+    SetSumarryData,
+    SetEducationData,
+  ]);
 
   return (
     <>
       <Container className={classNames("p-2 pb-2 text-start")}>
         <div className={styles.maincontainer}>
-          <div
-            className={classNames("animate__animated", "animate__bounceIn")}
-          ></div>
+          <section className={`${styles.section} ${styles.heroSection}`}>
+            <div className={styles.imagewrapper}>
+              <img
+                src={images.ppimage}
+                alt="Profile"
+                className={styles.ppimage}
+              />
+            </div>
 
-          <div
-            className={classNames(
-              styles.imagewrapper,
-              "animate__animated",
-              "animate__bounceIn",
-            )}
-          >
-            <img
-              className={classNames(
-                "animate__animated",
-                "animate__bounceIn",
-                styles.ppimage,
-              )}
-              src={images.ppimage}
-              alt="Tejas S. Jawalkar"
-            />
-          </div>
-          <div
-            className={classNames(
-              "animate__animated",
-              "animate__bounceIn",
-              styles.content1,
-            )}
-          >
-            <Container>
-              <p className={classNames(styles.title, "mt-1")}>
-                Software Engineer | Full Stack Developer
-              </p>
-              <p>
-                I'm the passionate Full Stack Developer having good knowledge in
-                the various web technologies to provide a robust synopsis for
-                high level overviews.
-              </p>
-            </Container>
-          </div>
-          <div className={classNames("mt-2 mb-2", styles.personalcontainer)}>
-            <p>Personal Details</p>
-            <div
-              className={classNames(
-                "mt-3 mb-3",
-                "animate__animated",
-                "animate__bounceIn",
-                styles.content2,
-              )}
-            >
-              <div className={classNames(styles.ptext)}>
-                <img src={images.logo18} alt="Arrow" />
-                &nbsp; Email: tejassj1998@gmail.com
-              </div>
-              <div className={classNames(styles.ptext)}>
-                <img src={images.logo18} alt="Arrow" />
-                &nbsp; Degree : M. C. A.
-              </div>
-              <div className={classNames(styles.ptext)}>
-                <img src={images.logo18} alt="Arrow" />
-                &nbsp; Status :{" "}
-                <i className={classNames("")} style={{ fontStyle: "normal" }}>
-                  Open to Work
-                </i>
+            <div className={styles.heroContent}>
+              <h3 className={styles.title}>
+                Software Engineer | Full Stack .NET Developer
+              </h3>
+
+              <p className={styles.description}>{SumarryData}</p>
+            </div>
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.heading}>Personal Details</h2>
+
+            <div className={styles.personalcontainer}>
+              <div className={styles.personalCard}>
+                <Row>
+                  <Col sm={6}>
+                    {" "}
+                    <img src={images.logo18} alt="Arrow" />
+                    &nbsp; Email: tejassj1998@gmail.com
+                  </Col>
+                  <Col sm={6}>
+                    <img src={images.logo18} alt="Arrow" />
+                    &nbsp; Country: India
+                  </Col>
+                </Row>
+                <Row>
+                  <Col sm={6}>
+                    {" "}
+                    <img src={images.logo18} alt="Arrow" />
+                    &nbsp; Date of Birth: {dob}
+                  </Col>
+                  <Col sm={6}>
+                    <img src={images.logo18} alt="Arrow" />
+                    &nbsp; Age: {Age}
+                  </Col>
+                </Row>
               </div>
             </div>
-            <div
-              className={classNames(
-                "mt-3 mb-3",
-                "animate__animated",
-                "animate__bounceIn",
-                styles.content2,
-              )}
-            >
-              <div className={classNames(styles.ptext)}>
-                <img src={images.logo18} alt="Arrow" />
-                &nbsp; Date of Birth: {dob}
-              </div>
-              <div className={classNames(styles.ptext)}>
-                <img src={images.logo18} alt="Arrow" />
-                &nbsp; Age: {Age}
-              </div>
-              <div className={classNames(styles.ptext)}>
-                <img src={images.logo18} alt="Arrow" />
-                &nbsp; Country: India
-              </div>
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.heading}>Educational Details</h2>
+
+            <div className={styles.educationContainer}>
+              {EducationData.map((education) => (
+                <div className={styles.educationCard} key={education.id}>
+                  <h4 className={styles.degree}>
+                    {education.Degree}
+                    <span className={styles.duration}>
+                      ({education.From} - {education.To})
+                    </span>
+                  </h4>
+
+                  <p className={styles.university}>{education.University}</p>
+                </div>
+              ))}
             </div>
-            <div className="">
-              <p
-                className={classNames(
-                  styles.content3,
-                  "animate__animated",
-                  "animate__bounceIn",
-                )}
-              >
-                Over 3 years of full-time experience in Web Application
-                Development, involved in all stages of the software development
-                lifecycle for dynamic web projects. Skilled in C#, JavaScript,
-                C, C++, and JSON, with a strong foundation in Object-Oriented
-                Design, Data Structures, and Algorithms. Proficient in Crystal
-                Reports for designing and generating business reports.
-                Experienced with POCO Generator for efficient entity class
-                generation in .NET applications. Worked with DBUM, a
-                company-developed tool used for executing and managing database
-                scripts.{" "}
-              </p>
-            </div>
-          </div>
-          <div className={styles.Expcontainer}></div>
-          <div className={classNames("mt-0", styles.skillcontainer)}>
-            <div className="break"></div>
-            <p className={classNames(styles.heading)}>Skills I Have</p>
-            <Container>
-              <Row>
-                <Col sm={6}>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      Html &nbsp;&nbsp;&nbsp;<span>80%</span>
-                    </p>
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.heading}>Skills</h2>
+            <Row>
+              {SkillData.map((skills) => (
+                <div className="col-md-6 col-sm-12" key={skills.id}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillHeader}>
+                      <span>{skills.name}</span>
+                      <span>{skills.percentage}%</span>
+                    </div>
                     <div className="progress">
                       <div
                         className={classNames("progress-bar")}
+                        style={{
+                          width: `${skills.percentage}%`,
+                          backgroundColor: "#4988fd",
+                        }}
                         role="progressbar"
-                        style={{ width: "80%", backgroundColor: "#4988fd" }}
-                        aria-valuenow="75"
+                        aria-valuenow={skills.ariavaluenow}
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
                   </div>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      CSS&nbsp;&nbsp;&nbsp;<span>50%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "50%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      ReactJs &nbsp;&nbsp;&nbsp;<span>50%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "50%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      JavaScript &nbsp;&nbsp;&nbsp;<span>60%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "60%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      SQL &nbsp;&nbsp;&nbsp;<span>60%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "60%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </Col>
-                <Col sm={6}>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      C-Sharp &nbsp;&nbsp;&nbsp;<span>75%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "75%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      Dot Net / Dot Net Core &nbsp;&nbsp;&nbsp;<span>75%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "75%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      Node.Js &nbsp;&nbsp;&nbsp;<span>50%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "50%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      ExpressJs &nbsp;&nbsp;&nbsp;<span>60%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "60%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      No-SQL &nbsp;&nbsp;&nbsp;<span>40%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "40%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </Col>
-                <Col sm={6}>
-                  <div className={classNames(styles.progres)}>
-                    <p>
-                      SSRS (Reporting Tools) &nbsp;&nbsp;&nbsp;<span>50%</span>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className={classNames("progress-bar")}
-                        style={{ width: "50%", backgroundColor: "#4988fd" }}
-                        role="progressbar"
-                        aria-valuenow="50"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          <div className={classNames(styles.hobbiescontainer)}>
-            <div className="break"></div>
-            <p
-              className={classNames(styles.heading)}
-              style={{ fontSize: "15px" }}
-            >
-              Hobbies
-            </p>
-            <Row className="text-center">
-              <Col sm={3}>
-                <div>
-                  <p>Outdoor Games</p>
-                  <img src={images.image1} alt="Sports" />
                 </div>
-              </Col>
-              <Col sm={3}>
-                <div>
-                  <p>Learning</p>
-                  <img src={images.image2} alt="Sports" />
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div>
-                  <p>Play PC / Mobile Games</p>
-                  <img src={images.image3} alt="Sports" />
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div>
-                  <p>Watching Movies</p>
-                  <img src={images.image4} alt="Sports" />
-                </div>
-              </Col>
+              ))}
             </Row>
-          </div>
-          <div className={classNames(styles.cerficationcontainer)}>
-            <div className="break"></div>
-            <p className={classNames(styles.heading)}>Cerfications I have</p>
-            <Container
-              className={classNames("text-start", styles.certifiacates)}
-            >
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.heading}>Hobbies</h2>
+            <div className="row">
+              {HobbiesData.map((h) => (
+                <div className="col-md-3 col-sm-6" key={h.id}>
+                  <div className={styles.hobbyCard}>
+                    <h5>{h.hobbiename}</h5>
+                    <img src={h.image} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.heading}>Certifications</h2>
+
+            <div className={styles.certifiacates}>
               {CertificationsData.map((cert) => (
                 <div key={cert.id}>
                   <a href={cert.link} target="_blank" rel="noreferrer">
@@ -373,25 +170,23 @@ export const About = () => {
                   </a>
                 </div>
               ))}
-            </Container>
-          </div>
-          <div className={classNames(styles.interestcontainer)}>
-            <div className="break"></div>
-            <p className={classNames(styles.heading)}>Interested In</p>
-
-            {chunkArray(interestedData, 4).map((group, rowIndex) => (
-              <Row key={rowIndex} className="text-center">
-                {group.map((item) => (
-                  <Col key={item.id} sm={3}>
+            </div>
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.heading}>Interested In</h2>
+            <div className="row g-3">
+              <Row className="g-3">
+                {InterestedData.map((item) => (
+                  <Col lg={3} md={4} sm={6} xs={12} key={item.id}>
                     <div className={styles.interesticon}>
                       <img src={images[item.logo]} alt={item.alt} />
-                      <i>{item.title}</i>
+                      <span>{item.title}</span>
                     </div>
                   </Col>
                 ))}
               </Row>
-            ))}
-          </div>
+            </div>
+          </section>
         </div>
       </Container>
     </>

@@ -21,7 +21,7 @@ import logo12 from "../images/vscode-icons--file-type-vite.svg";
 import logo13 from "../images/hugeicons--code.svg";
 import logo14 from "../images/ri--database-2-line.svg";
 import logo15 from "../images/carbon--data-structured.svg";
-import logo16 from "../images/sql-reporting-svgrepo-com.svg";
+import logo16 from "../images/kafka.svg";
 import logo17 from "../images/address.svg";
 import logo19 from "../images/sharing.svg";
 import logo20 from "../images/email.svg";
@@ -35,6 +35,12 @@ import logo26 from "../images/api.svg";
 import logo27 from "../images/angular.svg";
 import logo28 from "../images/administratordeveloper.svg";
 import logo29 from "../images/growth.svg";
+import logo30 from "../images/microservices.svg";
+import logo31 from "../images/kubernetes.svg";
+import logo32 from "../images/maws.svg";
+import logo33 from "../images/docker.svg";
+import logo34 from "../images/cloudcomputing.svg";
+import logo35 from "../images/ai.svg";
 
 // Export the images as an object
 const images = {
@@ -73,6 +79,12 @@ const images = {
   logo27,
   logo28,
   logo29,
+  logo30,
+  logo31,
+  logo32,
+  logo33,
+  logo34,
+  logo35,
 };
 
 export default images;

@@ -10,7 +10,7 @@ export const Experience = () => {
 
   useEffect(() => {
     setExperienceData(experiences);
-  }, []);
+  }, [ExperienceData]);
 
   return (
     <>
