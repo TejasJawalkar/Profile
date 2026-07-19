@@ -14,7 +14,6 @@ export const PageNavigationHeader = () => {
   else if (pathname === "/Contact") pageName = "Get In Touch";
   else if (pathname === "/Experience") pageName = "Experience";
 
-  console.log([]);
   return (
     <>
       {pathname != "/" ? (

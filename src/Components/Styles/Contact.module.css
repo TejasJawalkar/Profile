@@ -1,52 +1,26 @@
 /* ===================== MAIN CONTAINER ===================== */
 .maincontainer {
-  width: 100%;
-  padding: 2rem 0;
-  color: white;
+     width: 100%;
+    padding: 0rem 0;
+    
 }
-
-/* ===================== HEADING ===================== */
-.heading {
-  display: inline-block;
-    font-size: 2.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    position: absolute;
-    top: 6rem;
-    left: 8rem;
-    color: #fff;
-}
-
-.heading::after {
-  content: "";
-  width: 40px;
-  height: 3px;
-  background: #ff8d8d;
-  display: block;
-  margin-top: 4px;
-  transition: width 0.4s ease;
-}
-
-.heading:hover::after {
-  width: 80%;
-}
-
 /* ===================== GLASS CARD ===================== */
 .glassCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+
   border-radius: 16px;
   padding: 1rem 1.4rem;
   background-color: transparent;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: right 0.4s ease-in-out;
-  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  
 }
 
 .glassCard:hover {
-  transform: translateY(-4px);
-    box-shadow: rgba(114, 83, 83, 0.25) 0px 15px 25px, rgba(114, 83, 83, 0.20) 0px 5px 10px;
+   
+    border-color: #4d8eff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* ===================== ICON WRAPPER ===================== */
@@ -126,14 +100,6 @@ textarea:focus {
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
-
-
-  .heading {
-    position: absolute;
-    top: 5rem;
-    left: 1rem;
-    font-size: 1.8rem;
-  }
 
   .icon-round{
   position: relative;

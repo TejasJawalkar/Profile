@@ -1,15 +1,11 @@
-import "../../bootstrap.min.css";
 import { Header } from "../common/Header";
-import "../Styles/App.css";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import { Home } from "../Home";
-import { About } from "../About";
-import { Services } from "../Services";
-import { Contact } from "../Contact";
-import { Experience } from "../Experience";
+import { HashRouter as Router } from "react-router-dom";
 import { Container } from "reactstrap";
 import { PageNavigationHeader } from "./PageNavigationHeader";
 import classNames from "classnames";
+import "../Styles/App.css";
+import "../../bootstrap.min.css";
+import { AppRoutes } from "../Routes/AppRoutes";
 
 function App() {
   return (
@@ -19,19 +15,13 @@ function App() {
           <Header />
           <div className={classNames("maincontent")}>
             <PageNavigationHeader />
-            <Routes>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="/About" element={<About />}></Route>
-              <Route path="/Services" element={<Services />}></Route>
-              <Route path="/Contact" element={<Contact />}></Route>
-              <Route path="/Experience" element={<Experience />}></Route>
-            </Routes>
+
+            <AppRoutes />
           </div>
           <div></div>
           <div className="mt-3 fixed-bottom"></div>
         </Router>
       </Container>
-      <Container className={classNames("p-2")}></Container>
     </>
   );
 }

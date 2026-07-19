@@ -1,155 +1,90 @@
-import classNames from "classnames";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
-import Styles from "./Styles/Contact.module.css";
+import { validateField, validateForm } from "./Core/ContactCore";
+import { config } from "./common/config/config";
 import images from "./json/exports";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaBitbucket } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import Styles from "./Styles/Contact.module.css";
+
 export const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [nameError, setNameError] = useState();
-  const [emailError, setEmailError] = useState();
-  const [subjectError, setSubjectError] = useState();
-  const [messageError, setMessageError] = useState();
-  const [data, setData] = useState(true);
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const messageRef = useRef();
-  const subjectRef = useRef();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const form = useRef();
 
-  const nameCheck = (e) => {
-    if (!nameRef.current.value) {
-      setNameError("Enter Full Name");
-      setData(true);
-    } else {
-      setNameError();
-      setData(false);
-    }
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
   };
-  const emailCheck = (e) => {
-    if (!emailRef.current.value) {
-      setEmailError("Enter Email");
-      setData(true);
-    } else if (!emailPattern.test(emailRef.current.value)) {
-      setEmailError("Enter Valid Email");
-      setData(true);
-    } else {
-      setEmailError();
-      setData(false);
-    }
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    setErrors((prev) => ({
+      ...prev,
+      [name]: validateField(name, value),
+    }));
   };
-  const subjectCheck = (e) => {
-    if (!subjectRef.current.value) {
-      setSubjectError("Enter Subject");
-      setData(true);
-    } else {
-      setSubjectError();
-      setData(false);
-    }
+
+  const validate = () => {
+    const validateError = validateForm(formData);
+    setErrors(validateError);
+    return Object.keys(validateError).length == 0;
   };
-  const messageCheck = (e) => {
-    if (!messageRef.current.value) {
-      setMessageError("Enter Message");
-      setData(true);
-    } else {
-      setMessageError();
-      setData(false);
-    }
-  };
-  const sendEmail = (e) => {
+
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_zzfeav8",
-        "template_pvidtoj",
+    console.log(import.meta.env.VITE_EMAIL_PUBLIC_KEY);
+    if (!validate()) return;
+    try {
+      await emailjs.sendForm(
+        config.VITE_EMAIL_SERVICE_ID,
+        config.VITE_EMAIL_TEMPLATE_ID,
         form.current,
-        "cyzp35x2_OwR_SVmn",
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        },
+        config.VITE_EMAIL_PUBLICK_EY,
       );
-    Swal.fire({
-      title: `Hello ${name}`,
-      html: "<html><body><p>Thank you for reaching out, I will get back to you shortly with my thoughts or any further questions.</p></br><p>Thank you again, and I look forward to staying in touch.</p></body></html>",
-      icon: "success",
-      customClass: {
-        popup: "swal2-popup",
-      },
-    });
-    setData(true);
-    e.target.reset();
+
+      Swal.fire({
+        icon: "success",
+        title: `Hello ${formData.name}`,
+        html: `<p>Thank you for reaching out.</p>
+              <p> I will get back to you shortly.</p>`,
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      setErrors({});
+    } catch (error) {
+      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: `Unable to send email`,
+        html: `<p> Please try again later..</p>`,
+      });
+    }
   };
+
   return (
     <div className={Styles.maincontainer}>
       <Container className="p-3">
-        <Row className="mt-2">
-          <Col md={6} className="mt-3">
-            <div className={Styles.glassCard}>
-              <div className="d-flex align-items-center gap-3">
-                <img src={images.logo17} alt="Address" height="55" />
-                <h5 className="m-0">Address</h5>
-              </div>
-
-              <div className="mt-3">
-                <p>Home Town: 70 Foot Road, Solapur, 413006.</p>
-                <p>Current: Kale Padal, Hadapsar, Pune, 411028.</p>
-                <p>(+91) 917-280-4246 (Call/WhatsApp)</p>
-              </div>
-            </div>
-          </Col>
-
-          {/* SOCIAL MEDIA CARD */}
-          <Col md={6} className="mt-3">
-            <div className={Styles.glassCard}>
-              <div className="d-flex align-items-center gap-3">
-                <img src={images.logo19} alt="Social" height="55" />
-                <h5 className="m-0">Social Media</h5>
-              </div>
-              <div className={Styles.iconcontainer}>
-                <div className={Styles.iconWrap}>
-                  <a
-                    className={`${Styles["icon-round"]} ${Styles["icon-ln"]}`}
-                    href="https://www.linkedin.com/in/tejas-jawalkar-b4b1a0180/"
-                    target="_blank"
-                  >
-                    <FaLinkedin />
-                  </a>
-
-                  <a
-                    className={`${Styles["icon-round"]} ${Styles["icon-gh"]}`}
-                    href="https://github.com/TejasJawalkar?tab=repositories"
-                    target="_blank"
-                  >
-                    <FaGithub />
-                  </a>
-
-                  <a
-                    className={`${Styles["icon-round"]} ${Styles["icon-bb"]}`}
-                    href="https://bitbucket.org/assignmentandstudy/workspace/overview/"
-                    target="_blank"
-                  >
-                    <FaBitbucket />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </Col>
-        </Row>
-
-        {/* ================= CONTACT FORM ================= */}
         <Row className="mt-4">
           <Col md={12}>
             <div className={Styles.glassCard}>
@@ -163,13 +98,14 @@ export const Contact = () => {
                   <Col md={6}>
                     <input
                       type="text"
+                      name="name"
                       placeholder="Full Name"
-                      ref={nameRef}
-                      onChange={(e) => setName(e.target.value)}
-                      onBlur={nameCheck}
+                      value={formData.name}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
-                    {nameError && (
-                      <div className="text-danger">{nameError}</div>
+                    {errors.name && (
+                      <div className="text-danger">{errors.name}</div>
                     )}
                   </Col>
 
@@ -177,12 +113,13 @@ export const Contact = () => {
                     <input
                       type="email"
                       placeholder="Email"
-                      ref={emailRef}
-                      onChange={(e) => setEmail(e.target.value)}
-                      onBlur={emailCheck}
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
-                    {emailError && (
-                      <div className="text-danger">{emailError}</div>
+                    {errors.email && (
+                      <div className="text-danger">{errors.email}</div>
                     )}
                   </Col>
                 </Row>
@@ -192,12 +129,13 @@ export const Contact = () => {
                     <input
                       type="text"
                       placeholder="Subject"
-                      ref={subjectRef}
-                      onChange={(e) => setSubject(e.target.value)}
-                      onBlur={subjectCheck}
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
-                    {subjectError && (
-                      <div className="text-danger">{subjectError}</div>
+                    {errors.subject && (
+                      <div className="text-danger">{errors.subject}</div>
                     )}
                   </Col>
                 </Row>
@@ -207,12 +145,13 @@ export const Contact = () => {
                     <textarea
                       placeholder="Message"
                       rows={4}
-                      ref={messageRef}
-                      onChange={(e) => setMessage(e.target.value)}
-                      onBlur={messageCheck}
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     ></textarea>
-                    {messageError && (
-                      <div className="text-danger">{messageError}</div>
+                    {errors.message && (
+                      <div className="text-danger">{errors.message}</div>
                     )}
                   </Col>
                 </Row>
@@ -221,7 +160,6 @@ export const Contact = () => {
                   <Col className="text-end">
                     <button
                       className="btn btn-outline-info formbtn"
-                      disabled={data}
                       type="submit"
                     >
                       Send

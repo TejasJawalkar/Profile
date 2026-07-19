@@ -3,7 +3,7 @@
 ============================= */
 
 .container {
-  min-height: calc(100vh - 70px); /* Navbar height */
+min-height: calc(75vh - 70px);
   display: flex;
   align-items: start;
   justify-content: flex-start;
@@ -95,6 +95,7 @@
 .contactbtn {
   width: 180px;
   height: 55px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 40px;
   display: flex;
   justify-content: center;

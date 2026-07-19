@@ -10,10 +10,12 @@ import classNames from "classnames";
 import images from "./json/exports";
 import linksConstants from "./constants/links_constants";
 import particleOptions from "./constants/particle_constants";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   //#region
   const [init, setInit] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -66,9 +68,8 @@ export const Home = () => {
                 styles.ch2,
               )}
             >
-              I’m a{" "}
               <u style={{ textDecorationColor: "#4988fd" }}>
-                <b>FullStack .Net Developer</b>
+                <b>.Net Full-Stack Developer</b>
               </u>
             </h2>
 
@@ -80,7 +81,7 @@ export const Home = () => {
               )}
             >
               With over <b>3+</b> years of experience building scalable
-              enterprise applications using <br />
+              enterprise applications using
               <span style={{ fontWeight: "bold" }}>
                 C#, ASP.NET Core, Angular, SQL Server, REST APIs, and Layered
                 Architecture.
@@ -136,12 +137,12 @@ export const Home = () => {
                 Resume <img src={images.open} alt="Redirect to Resume" />
               </a>
 
-              <a
-                href="#contact"
+              <button
                 className={classNames(styles.contactbtn, "btn btn-primary")}
+                onClick={() => navigate("/Contact")}
               >
                 Contact Me
-              </a>
+              </button>
             </div>
           </div>
         </section>

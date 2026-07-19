@@ -16,7 +16,7 @@ body {
   background: radial-gradient(#000435 0%, #000435 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1818bd", endColorstr="#35d0f0", GradientType=1);
   padding: 1px;
-  color: white;
+  color: white !important;
   font-family: 'Times New Roman', Times, serif;
   font-stretch: condensed;
   font-weight: 200;

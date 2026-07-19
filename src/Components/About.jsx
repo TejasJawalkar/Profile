@@ -63,7 +63,8 @@ export const About = () => {
 
             <div className={styles.heroContent}>
               <h3 className={styles.title}>
-                Software Engineer | Full Stack .NET Developer
+                Software Engineer | ASP.NET Full-Stack Developer | Full-Stack
+                Developer
               </h3>
 
               <p className={styles.description}>{SumarryData}</p>
@@ -71,7 +72,6 @@ export const About = () => {
           </section>
           <section className={styles.section}>
             <h2 className={styles.heading}>Personal Details</h2>
-
             <div className={styles.personalcontainer}>
               <div className={styles.personalCard}>
                 <Row>
@@ -101,7 +101,6 @@ export const About = () => {
           </section>
           <section className={styles.section}>
             <h2 className={styles.heading}>Educational Details</h2>
-
             <div className={styles.educationContainer}>
               {EducationData.map((education) => (
                 <div className={styles.educationCard} key={education.id}>
@@ -160,7 +159,6 @@ export const About = () => {
           </section>
           <section className={styles.section}>
             <h2 className={styles.heading}>Certifications</h2>
-
             <div className={styles.certifiacates}>
               {CertificationsData.map((cert) => (
                 <div key={cert.id}>
@@ -174,8 +172,8 @@ export const About = () => {
           </section>
           <section className={styles.section}>
             <h2 className={styles.heading}>Interested In</h2>
-            <div className="row g-3">
-              <Row className="g-3">
+            <div className="row g-2">
+              <Row className="g-2">
                 {InterestedData.map((item) => (
                   <Col lg={3} md={4} sm={6} xs={12} key={item.id}>
                     <div className={styles.interesticon}>
