@@ -80,20 +80,10 @@ export const About = () => {
                     <img src={images.logo18} alt="Arrow" />
                     &nbsp; Email: tejassj1998@gmail.com
                   </Col>
+
                   <Col sm={6}>
                     <img src={images.logo18} alt="Arrow" />
                     &nbsp; Country: India
-                  </Col>
-                </Row>
-                <Row>
-                  <Col sm={6}>
-                    {" "}
-                    <img src={images.logo18} alt="Arrow" />
-                    &nbsp; Date of Birth: {dob}
-                  </Col>
-                  <Col sm={6}>
-                    <img src={images.logo18} alt="Arrow" />
-                    &nbsp; Age: {Age}
                   </Col>
                 </Row>
               </div>
