@@ -1,111 +1,75 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar, NavbarBrand, NavItem } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faBarsStaggered,
-  faBriefcase,
-  faHome,
-  faInfo,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import styles from "./Sidebar.module.css";
+import { faBars, faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
+import styles from "../Styles/Sidebar.module.css";
 import { NavLink } from "react-router-dom";
-import { faTools } from "@fortawesome/free-solid-svg-icons/faTools";
+import { navItems } from "../json/NavbarItems";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => setIsOpen(!isOpen);
-  const okf = () => {
-    toggleSidebar();
+  const toggleSidebar = () => {
+    setIsOpen((prev) => !prev);
+  };
+  const closeSidebar = () => {
+    setIsOpen(false);
   };
   return (
     <>
       <Container fluid className="text-start mt-2">
-        <Navbar className={`${styles.navigation} shadow-lg  fixed-top`}>
-          <NavbarBrand className={`${styles.brandText}`}>T J</NavbarBrand>
-          <Nav className="shadow-lg">
-            <NavItem>
-              <div className={`${styles.darkmode}`}>
-                {/* <button
-                  className="btn shadow-none"
-                  onClick={colortoggleSidebar}
-                >
-                  <FontAwesomeIcon
-                    icon={faMoon}
-                    style={{ color: !isColor ? "white" : "black" }}
-                    size="2x"
-                  />
-                </button> */}
-              </div>
-            </NavItem>
-            <NavItem>
-              <div className={styles.navbarToggler} onClick={toggleSidebar}>
-                {!isOpen ? (
-                  <FontAwesomeIcon icon={faBars} size="2x" />
-                ) : (
-                  <FontAwesomeIcon icon={faBarsStaggered} size="2x" />
-                )}
-              </div>
-            </NavItem>
+        <Navbar className={`${styles.navigation} shadow-lg fixed-top`}>
+          <NavbarBrand className={styles.brandText}>T J</NavbarBrand>
+
+          {/* Desktop Navigation */}
+
+          <Nav className="ms-auto d-none d-lg-flex align-items-center">
+            {navItems.map(({ path, label, icon }) => (
+              <NavItem key={path}>
+                <NavLink className={styles.link} to={path}>
+                  {label !== "Contact" ? <span>{label}</span> : ""}
+                </NavLink>
+              </NavItem>
+            ))}
           </Nav>
+
+          {/* Mobile Hamburger */}
+
+          <div
+            className={`d-lg-none ${styles.navbarToggler}`}
+            onClick={toggleSidebar}
+          >
+            <FontAwesomeIcon
+              icon={isOpen ? faBarsStaggered : faBars}
+              size="2x"
+            />
+          </div>
         </Navbar>
       </Container>
-      <div className={`${styles.sidebarContainer} mb-4`}>
+
+      <div className="d-lg-none">
         <div className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}>
           <Navbar>
-            <Nav navbar className="flex-column ">
-              <div className={`${styles.linkwrapper}`}>
-                <div className={`${styles.navitem}`}>
-                  <NavLink className={`${styles.link}`} to="/" onClick={okf}>
-                    <FontAwesomeIcon icon={faHome} size="1x" /> Home
-                  </NavLink>
-                </div>
-                <div className={`${styles.navitem}`}>
-                  <NavLink
-                    className={`${styles.link} `}
-                    to="/About"
-                    onClick={okf}
-                  >
-                    <FontAwesomeIcon icon={faInfo} size="1x" /> About
-                  </NavLink>
-                </div>
-                <div className={`${styles.navitem}`}>
-                  <NavLink
-                    className={`${styles.link}`}
-                    to="/Services"
-                    onClick={okf}
-                  >
-                    <FontAwesomeIcon icon={faTools} size="1x" /> Services
-                  </NavLink>
-                </div>
-                <div className={`${styles.navitem}`}>
-                  <NavLink
-                    className={`${styles.link}`}
-                    to="/Experience"
-                    onClick={okf}
-                  >
-                    <FontAwesomeIcon icon={faBriefcase} size="1x" /> Experience
-                  </NavLink>
-                </div>
-
-                <div className={`${styles.navitem}`}>
-                  <NavLink
-                    className={`${styles.link}`}
-                    to="/Contact"
-                    onClick={okf}
-                  >
-                    <FontAwesomeIcon icon={faPhone} size="1x" /> Contact
-                  </NavLink>
-                </div>
+            <Nav navbar className="flex-column">
+              <div className={styles.linkwrapper}>
+                {navItems.map(({ path, label, icon }) => (
+                  <div className={styles.navitem} key={path}>
+                    <NavLink
+                      className={styles.link}
+                      to={path}
+                      onClick={closeSidebar}
+                    >
+                      <FontAwesomeIcon icon={icon} className="me-2" />
+                      {label}
+                    </NavLink>
+                  </div>
+                ))}
               </div>
             </Nav>
           </Navbar>
-          {isOpen && (
-            <div className={styles.overlay} onClick={toggleSidebar}></div>
-          )}
         </div>
+
+        {isOpen && <div className={styles.overlay} onClick={closeSidebar} />}
       </div>
     </>
   );
