@@ -3,6 +3,7 @@ import styles from "./Styles/About.module.css";
 import classNames from "classnames";
 import { Col, Container, Row } from "reactstrap";
 import images from "./json/exports";
+import linksConstants from "./constants/links_constants";
 import {
   Educations,
   hobbies,
@@ -55,7 +56,7 @@ export const About = () => {
           <section className={`${styles.section} ${styles.heroSection}`}>
             <div className={styles.imagewrapper}>
               <img
-                src={images.ppimage}
+                src={linksConstants.PROFILE_PICTURE_URL}
                 alt="Profile"
                 className={styles.ppimage}
               />

@@ -2,7 +2,6 @@
 
 import image1 from "../images/stump.png";
 import logo18 from "../images/greater.svg";
-import ppimage from "../images/tejaspp.jpg";
 import image2 from "../images/learning.png";
 import image3 from "../images/gamepad.png";
 import image4 from "../images/video.png";
@@ -44,7 +43,6 @@ import logo35 from "../images/ai.svg";
 
 // Export the images as an object
 const images = {
-  ppimage,
   image1,
   image2,
   image3,
