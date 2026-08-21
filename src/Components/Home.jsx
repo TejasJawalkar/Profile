@@ -11,12 +11,9 @@ import images from "./json/exports";
 import linksConstants from "./constants/links_constants";
 import particleOptions from "./constants/particle_constants";
 import { useNavigate } from "react-router-dom";
-
 export const Home = () => {
-  //#region
   const [init, setInit] = useState(false);
   const navigate = useNavigate();
-
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
@@ -24,10 +21,7 @@ export const Home = () => {
       setInit(true);
     });
   }, []);
-
   const particlesLoaded = (container) => {};
-  //#endregion
-
   return (
     <>
       <Container fluid className="text-light mt-4 position-relative">
@@ -39,10 +33,8 @@ export const Home = () => {
             style={{ zIndex: 0, position: "absolute", top: 0, left: 0 }}
           />
         )}
-
         <section className={classNames(styles.container)}>
           <div id="detailscontainer" className={styles.detailscontainer}>
-            {/* Heading Section */}
             <h1
               className={classNames(
                 "animate__animated",
@@ -60,7 +52,6 @@ export const Home = () => {
                 Tejas S. Jawalkar
               </span>
             </h1>
-
             <h2
               className={classNames(
                 "animate__animated",
@@ -87,8 +78,6 @@ export const Home = () => {
                 Architecture.
               </span>
             </p>
-
-            {/* Icons Section */}
             <div
               className={classNames(
                 "animate__animated",
@@ -125,8 +114,6 @@ export const Home = () => {
                 <FaBitbucket />
               </a>
             </div>
-
-            {/* Buttons Section */}
             <div className={classNames(styles.buttonContainer)}>
               <a
                 href={linksConstants.RESUME_URL}
@@ -136,7 +123,6 @@ export const Home = () => {
               >
                 Resume <img src={images.open} alt="Redirect to Resume" />
               </a>
-
               <button
                 className={classNames(styles.contactbtn, "btn btn-primary")}
                 onClick={() => navigate("/Contact")}

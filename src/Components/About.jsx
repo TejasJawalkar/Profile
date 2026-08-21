@@ -20,18 +20,14 @@ export const About = () => {
   const [HobbiesData, SetHobbiesData] = useState([]);
   const [SkillData, SetSkillData] = useState([]);
   const [SumarryData, SetSumarryData] = useState("");
-
   let [Age, setAge] = useState();
   let [cyear, setCYear] = useState(0);
   let dob = "12/05/1998";
-
   useEffect(() => {
     const currentYear = new Date().getFullYear();
     setCYear(currentYear);
-
     const [day, month, year] = dob.split("/").map(Number);
     const birthYear = year;
-
     setAge(currentYear - birthYear);
     SetInterestedData(interested);
     SetCertificationsData(certifications);
@@ -48,7 +44,6 @@ export const About = () => {
     SetSumarryData,
     SetEducationData,
   ]);
-
   return (
     <>
       <Container className={classNames("p-2 pb-2 text-start")}>
@@ -61,13 +56,11 @@ export const About = () => {
                 className={styles.ppimage}
               />
             </div>
-
             <div className={styles.heroContent}>
               <h3 className={styles.title}>
                 Software Engineer | ASP.NET Full-Stack Developer | Full-Stack
                 Developer
               </h3>
-
               <p className={styles.description}>{SumarryData}</p>
             </div>
           </section>
@@ -81,7 +74,6 @@ export const About = () => {
                     <img src={images.logo18} alt="Arrow" />
                     &nbsp; Email: tejassj1998@gmail.com
                   </Col>
-
                   <Col sm={6}>
                     <img src={images.logo18} alt="Arrow" />
                     &nbsp; Country: India
@@ -101,7 +93,6 @@ export const About = () => {
                       ({education.From} - {education.To})
                     </span>
                   </h4>
-
                   <p className={styles.university}>{education.University}</p>
                 </div>
               ))}

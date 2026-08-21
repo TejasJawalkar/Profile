@@ -1,5 +1,3 @@
-// src/assets/images.js
-
 import image1 from "../images/stump.png";
 import logo18 from "../images/greater.svg";
 import image2 from "../images/learning.png";
@@ -40,8 +38,6 @@ import logo32 from "../images/maws.svg";
 import logo33 from "../images/docker.svg";
 import logo34 from "../images/cloudcomputing.svg";
 import logo35 from "../images/ai.svg";
-
-// Export the images as an object
 const images = {
   image1,
   image2,
@@ -84,5 +80,4 @@ const images = {
   logo34,
   logo35,
 };
-
 export default images;
