@@ -41,6 +41,13 @@ const Service = [
     description:
       "Improve application and database performance through query tuning, API optimization, and efficient data processing techniques.",
   },
+  {
+    id: 7,
+    title: "AI-Assisted Development & Debugging",
+    image: "logo36",
+    description:
+      "Develop custom AI prompts using GitHub Copilot to investigate complex software defects, trace code execution, identify potential root causes, and guide evidence-based fixes through structured debugging workflows.",
+  },
 ];
 
 export default Service;

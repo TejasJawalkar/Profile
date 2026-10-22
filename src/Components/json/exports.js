@@ -38,6 +38,8 @@ import logo32 from "../images/maws.svg";
 import logo33 from "../images/docker.svg";
 import logo34 from "../images/cloudcomputing.svg";
 import logo35 from "../images/ai.svg";
+import logo36 from "../images/aiassistancedev.svg";
+
 const images = {
   image1,
   image2,
@@ -79,5 +81,6 @@ const images = {
   logo33,
   logo34,
   logo35,
+  logo36,
 };
 export default images;
