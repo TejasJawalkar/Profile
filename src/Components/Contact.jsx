@@ -47,7 +47,6 @@ export const Contact = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    console.log(import.meta.env.VITE_EMAIL_PUBLIC_KEY);
     if (!validate()) return;
     try {
       await emailjs.sendForm(
@@ -90,7 +89,7 @@ export const Contact = () => {
             <div className={Styles.glassCard}>
               <div className="d-flex align-items-center gap-3 mb-3">
                 <img src={images.logo20} alt="Connect" height="55" />
-                <h5 className="m-0">Connect With Me</h5>
+                <h5 className="m-0">Let's Connect</h5>
               </div>
 
               <form ref={form} onSubmit={sendEmail}>

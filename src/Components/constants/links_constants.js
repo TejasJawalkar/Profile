@@ -3,7 +3,7 @@ const RESUME_URL =
 const PROFILE_PICTURE_URL =
   "https://raw.githubusercontent.com/TejasJawalkar/myresume/166eae0163df8a057c98126e535efae432dc5bac/Pofile_Picture.jpeg";
 const GIT_HUB_URL = "https://github.com/TejasJawalkar?tab=repositories";
-const LINKEDIN_URL = "https://www.linkedin.com/in/tejas-jawalkar-b4b1a0180/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/profile-tejas-jawalkar/";
 const BIT_BUCKET_URL =
   "https://bitbucket.org/assignmentandstudy/workspace/overview/";
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -56,6 +56,26 @@ body {
 }
 
 
+.portfolio-footer {
+  text-align: center;
+  padding: 20px 12px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d8d0e8;
+  font-size: 14px;
+}
+
+.portfolio-footer p {
+  margin: 5px 0;
+}
+
+.portfolio-footer p:last-child {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+
+
 /* Tablet and above styles */
 @media (max-width: 577px) {
   .break {

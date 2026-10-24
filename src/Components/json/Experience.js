@@ -33,6 +33,7 @@ const experiences = [
     duration: "Jan 2025 - Present",
     description: [
       "Worked in a SAFe Agile environment, collaborating with multiple cross-functional teams to deliver healthcare application modules and enterprise features.",
+      "Developed custom prompts using GitHub Copilot Agent Mode to generate and execute unit tests, investigate complex defects, trace code execution, identify root causes, and implement minimal, evidence-based fixes.",
       "Developed and maintained healthcare modules using .NET Core, C#, Web API, and Oracle.",
       "Engineered real-time data visualization dashboards in AngularJS + TypeScript for a healthcare client (T-Systems), enabling clinicians to monitor live patient metrics.",
       "Designed and integrated Crystal Reports for dynamic reporting.",

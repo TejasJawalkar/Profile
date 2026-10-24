@@ -43,7 +43,7 @@ const Service = [
   },
   {
     id: 7,
-    title: "AI-Assisted Development & Debugging",
+    title: "AI-Assisted Development",
     image: "logo36",
     description:
       "Develop custom AI prompts using GitHub Copilot to investigate complex software defects, trace code execution, identify potential root causes, and guide evidence-based fixes through structured debugging workflows.",

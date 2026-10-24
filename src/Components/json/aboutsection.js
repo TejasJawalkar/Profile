@@ -162,4 +162,4 @@ export const certifications = [
 ];
 
 export const sumarry =
-  "Full Stack .Net Developer with 3+ years of experience developing enterprise web applications using C#, .NET Core, ASP.NET Core, Angular, and SQL Server. Experienced in backend development, REST API design, performance optimization, and full-stack delivery across healthcare and government domains. Strong understanding of OOP, SDLC, Agile and SAFe methodologies, and building scalable, maintainable applications.";
+  "Full Stack .NET Developer with 3+ years of experience developing and supporting enterprise web applications using C#, .NET Core, ASP.NET Core, Angular, and SQL Server. Experienced in backend development, REST API design, database optimization, application troubleshooting, and full-stack delivery across healthcare and EdTech domains. Strong understanding of OOP, SOLID principles, layered architecture, dependency injection, unit testing, and Agile/SAFe methodologies, with a focus on building scalable and maintainable applications.";

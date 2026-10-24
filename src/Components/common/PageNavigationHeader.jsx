@@ -9,10 +9,10 @@ export const PageNavigationHeader = () => {
   let pageName = "";
 
   if (pathname === "/") pageName = "";
-  else if (pathname === "/About") pageName = "Know More about Me....";
+  else if (pathname === "/About") pageName = "Know More About Me";
   else if (pathname === "/Services") pageName = "My Expertise & Services";
-  else if (pathname === "/Contact") pageName = "Get In Touch";
-  else if (pathname === "/Experience") pageName = "Experience";
+  else if (pathname === "/Contact") pageName = "Get in Touch";
+  else if (pathname === "/Experience") pageName = "My Professional Experience";
 
   return (
     <>

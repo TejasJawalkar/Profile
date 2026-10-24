@@ -21,6 +21,9 @@ function App() {
           <div></div>
           <div className="mt-3 fixed-bottom"></div>
         </Router>
+        <footer className="portfolio-footer">
+          <p>&copy; {new Date().getFullYear()} Tejas Jawalkar.</p>
+        </footer>
       </Container>
     </>
   );

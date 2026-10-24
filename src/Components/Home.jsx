@@ -74,7 +74,9 @@ export const Home = () => {
               With over <b>3+</b> years of experience building scalable
               enterprise applications using
               <span style={{ fontWeight: "bold" }}>
-                C#, ASP.NET Core, Angular, SQL Server, REST APIs, and Layered
+                {" "}
+                C#, ASP.NET Core, Angular, SQL Server, Oracle SQL, REST APIs,
+                GitHub Copilot, Design Pattern, and Layered
                 Architecture.
               </span>
             </p>
@@ -127,7 +129,7 @@ export const Home = () => {
                 className={classNames(styles.contactbtn, "btn btn-primary")}
                 onClick={() => navigate("/Contact")}
               >
-                Contact Me
+                Hire Me!
               </button>
             </div>
           </div>

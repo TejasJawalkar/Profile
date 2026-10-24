@@ -19,7 +19,7 @@ export const Header = () => {
     <>
       <Container fluid className="text-start mt-2">
         <Navbar className={`${styles.navigation} shadow-lg fixed-top`}>
-          <NavbarBrand className={styles.brandText}>T J</NavbarBrand>
+          <NavbarBrand className={styles.brandText}></NavbarBrand>
 
           {/* Desktop Navigation */}
 
