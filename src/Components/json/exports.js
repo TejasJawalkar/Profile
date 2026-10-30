@@ -39,6 +39,7 @@ import logo33 from "../images/docker.svg";
 import logo34 from "../images/cloudcomputing.svg";
 import logo35 from "../images/ai.svg";
 import logo36 from "../images/aiassistancedev.svg";
+import logo37 from "../images/python.svg";
 
 const images = {
   image1,
@@ -82,5 +83,6 @@ const images = {
   logo34,
   logo35,
   logo36,
+  logo37,
 };
 export default images;

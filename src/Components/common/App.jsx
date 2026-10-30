@@ -10,7 +10,7 @@ import { AppRoutes } from "../Routes/AppRoutes";
 function App() {
   return (
     <>
-      <Container className={classNames("p-2")} fluid>
+      <Container className={classNames("p-2", "app-shell")} fluid>
         <Router basename="">
           <Header />
           <div className={classNames("maincontent")}>

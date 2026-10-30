@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Container, Nav, Navbar, NavbarBrand, NavItem } from "reactstrap";
+import { useState } from "react";
+import { Container, Nav, Navbar, NavItem } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 import styles from "../Styles/Sidebar.module.css";
@@ -19,36 +19,45 @@ export const Header = () => {
     <>
       <Container fluid className="text-start mt-2">
         <Navbar className={`${styles.navigation} shadow-lg fixed-top`}>
-          <NavbarBrand className={styles.brandText}></NavbarBrand>
+          <NavLink className={styles.brandText} to="/"></NavLink>
 
           {/* Desktop Navigation */}
 
           <Nav className="ms-auto d-none d-lg-flex align-items-center">
-            {navItems.map(({ path, label, icon }) => (
+            {navItems
+              .filter(({ label }) => label !== "Contact")
+              .map(({ path, label }) => (
               <NavItem key={path}>
                 <NavLink className={styles.link} to={path}>
-                  {label !== "Contact" ? <span>{label}</span> : ""}
+                  {label}
                 </NavLink>
               </NavItem>
-            ))}
+              ))}
           </Nav>
 
           {/* Mobile Hamburger */}
 
-          <div
+          <button
+            type="button"
             className={`d-lg-none ${styles.navbarToggler}`}
+            aria-label={
+              isOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
             onClick={toggleSidebar}
           >
-            <FontAwesomeIcon
-              icon={isOpen ? faBarsStaggered : faBars}
-              size="2x"
-            />
-          </div>
+            <FontAwesomeIcon icon={isOpen ? faBarsStaggered : faBars} />
+          </button>
         </Navbar>
       </Container>
 
       <div className="d-lg-none">
-        <div className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}>
+        <div
+          id="mobile-navigation"
+          className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}
+          aria-hidden={!isOpen}
+        >
           <Navbar>
             <Nav navbar className="flex-column">
               <div className={styles.linkwrapper}>

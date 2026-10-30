@@ -120,7 +120,8 @@ export const SkillsSet = [
 ];
 
 export const interested = [
-  { id: 1, logo: "logo3", alt: "JavaScript", title: "JavaScript" },
+  // { id: 1, logo: "logo3", alt: "JavaScript", title: "JavaScript" },
+  { id: 1, logo: "logo37", alt: "Python", title: "Python" },
   { id: 2, logo: "logo4", alt: "Bootstrap", title: "Bootstrap" },
   { id: 3, logo: "logo5", alt: "NPM", title: "NPM" },
   { id: 4, logo: "logo6", alt: "ReactJS", title: "ReactJS" },
@@ -128,7 +129,12 @@ export const interested = [
   { id: 6, logo: "logo8", alt: "React-Bootstrap", title: "React-Bootstrap" },
   { id: 7, logo: "logo9", alt: "GitHub", title: "GitHub" },
   { id: 8, logo: "logo10", alt: "ExpressJS", title: "ExpressJS" },
-  { id: 9, logo: "logo15", alt: "Data Structure", title: "Data Structure" },
+  {
+    id: 9,
+    logo: "logo15",
+    alt: "Data Structure & Algorithms",
+    title: "Data Structure & Algorithms",
+  },
   { id: 10, logo: "logo32", alt: "Microsoft Azure", title: "Microsoft Azure" },
   { id: 11, logo: "logo33", alt: "Docker", title: "Docker" },
   { id: 12, logo: "logo31", alt: "Kubernetes", title: "Kubernetes" },

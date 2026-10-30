@@ -30,11 +30,7 @@ export const Services = () => {
                     {service.title}
                   </div>
                   <img src={images[service.image]} alt="" />
-                  <div>
-                    <Container>
-                      <p>{service.description}</p>
-                    </Container>
-                  </div>
+                  <p>{service.description}</p>
                 </div>
               ))}
             </div>

@@ -3,35 +3,35 @@
   position: relative;
 }
 
-/* Sidebar styling - moved to the right side with transparent background and blur */
 .sidebar {
   position: fixed;
-  top: -40px;
-  right: -250px;
-  /* Initially hidden off-screen on the right */
-  height: 120%;
-  width: 250px;
-  background-color: transparent;
-  /* Transparent white background */
+  top: 0;
+  right: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: min(280px, 85vw);
+  box-sizing: border-box;
+  background-color: rgba(7, 9, 47, 0.97);
   backdrop-filter: blur(10px);
-  /* Blur effect */
   -webkit-backdrop-filter: blur(10px);
-  /* For Safari support */
-  transition: right 0.4s ease-in-out;
-  /* Smooth slide-in/slide-out transition */
-  z-index: 1000;
-  padding-top: 60px;
-  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
-  /* Optional: shadow effect for better visibility */
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform 0.3s ease, visibility 0.3s ease;
+  z-index: 1050;
+  padding: 76px 1rem 1.5rem;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.3);
 }
 
-.navigation{
-  background-color: transparent;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
-  border:none;
-  border-bottom: 1px solid;
+.navigation {
+  box-sizing: border-box;
+  min-height: 64px;
+  padding: 0.5rem 1.25rem;
+  background-color: rgba(7, 9, 47, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .maincontent{
@@ -40,18 +40,35 @@
 }
 
 .open {
-  right: 0;
-  /* When open, it moves to the right edge of the screen */
+  transform: translateX(0);
+  visibility: visible;
 }
 
 /* Navbar-toggler for mobile view */
 .navbarToggler {
-  position: fixed;
-  top: 30px;
-  right: 15px;
-  /* Move the toggle to the right side */
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.35rem;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 2;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbarToggler:hover,
+.navbarToggler:focus-visible {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.32);
 }
 
 /* Nav styling inside the sidebar */
@@ -62,39 +79,28 @@
   border: none;
 }
 
-/* Overlay for closing the sidebar */
 .overlay {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-  /* Smooth fade-in/fade-out */
-  z-index: 900;
-}
-
-.overlay.open {
-  opacity: 1;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 20, 0.45);
+  z-index: 1020;
 }
 
 .brandText {
-  font-size: 2rem !important;
-  font-weight: bold;
-  display: block;
-  text-align: start;
-  padding: 0.2rem;
-  margin-top: 10px;
-  margin-left: 100px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
-  color: white !important;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .navitem {
-  margin: 0 0.5rem;
+  margin: 0;
 }
 
 .link {
@@ -114,11 +120,21 @@
   color: #4d8eff;
 }
 
-.linkwrapper {
-  margin-top: 10rem !important;
-  position: absolute;
-  left: 5rem;
+.sidebar .link {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+}
 
+.sidebar .link:hover,
+.sidebar .link.active {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.linkwrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .darkmode {
@@ -140,36 +156,6 @@
     position: absolute;
     top: 0px !important;
     left: 16rem;
-  }
-
-  .brandText {
-    font-size: 1.7rem !important;
-    position: absolute;
-    display: block;
-    text-align: start;
-    top: -7px;
-    left: -4rem;
-    text-decoration: none;
-    color: white !important;
-  }
-
-  .navbarToggler {
-    position: fixed;
-    top: 12px;
-    right: 15px;
-    /* Move the toggle to the right side */
-    cursor: pointer;
-    z-index: 1100;
-  }
-
-  .navigation{
-    background-color: transparent;
-    backdrop-filter: blur(30px);
-    height: 60px;
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: -2px 0 5px rgba(114, 83, 83, 0.2);
-    border: none;
-    border-bottom: 1px solid white;
   }
 
   .maincontent{
